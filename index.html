@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SyzUp — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
@@ -119,20 +122,38 @@
   }
 
   .nav-link:hover { border-color: var(--orange); text-decoration: none; }
+
+.danger {
+    background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius); padding: 20px 24px; margin: 16px 0;
+  }
+.danger-title {
+    font-size: 13px; font-weight: 700; color: var(--red);
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+  }
+
+/* language switcher */
+.lang-switch{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}
+.lang-btn{background:transparent;border:1px solid var(--border);color:var(--text-muted);padding:6px 14px;border-radius:999px;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.06em;cursor:pointer;transition:all .2s ease}
+.lang-btn:hover{border-color:var(--orange);color:var(--text)}
+.lang-btn.active{background:var(--orange);border-color:var(--orange);color:#fff}
+.conv-note{font-size:13px;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 14px;margin-bottom:24px;background:var(--surface);border-radius:0 8px 8px 0}
+.lang-doc{display:none}
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <div class="hero-badge">Legal</div>
-  <h1>Privacy Policy</h1>
-  <p>Last updated: March 18, 2026</p>
-  <a href="terms.html" class="nav-link">View Terms of Service →</a>
+<div class="hero-badge" id="h-badge">Legal</div>
+<h1 id="h-title"></h1>
+<p class="hero-updated" id="h-updated"></p>
+<a class="nav-link xdoc" id="h-nav" href="terms.html"></a>
+<div class="lang-switch"><button class="lang-btn" data-lang="pl">PL</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="de">DE</button><button class="lang-btn" data-lang="es">ES</button><button class="lang-btn" data-lang="fr">FR</button><button class="lang-btn" data-lang="it">IT</button><button class="lang-btn" data-lang="pt">PT</button><button class="lang-btn" data-lang="ru">RU</button><button class="lang-btn" data-lang="uk">UK</button></div>
 </div>
 
 <div class="container">
-
-  <section>
+<div class="lang-doc" data-lang="en">
+<section>
     <p>This Privacy Policy explains how SyzUp ("we", "us", "our", "the app") collects, uses, stores, and protects your personal data. SyzUp is operated from the European Union and serves users worldwide. This policy applies regardless of where you access the app from.</p>
     <p>By using SyzUp, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please do not use the app.</p>
   </section>
@@ -249,7 +270,7 @@
     <h2><span class="num">5.</span> User-Generated Content &amp; AI Training</h2>
 
     <h3>5.1 Videos &amp; Media</h3>
-    <p>When you upload personal record videos or other media to SyzUp, you grant us a license as described in our <a href="terms.html">Terms of Service</a>. In addition to displaying your content within the app's social features, we may use <strong>de-identified</strong> video content (with all personally identifying information such as faces, names, and metadata removed) for the purpose of training machine learning models to improve features such as exercise form analysis, technique feedback, and movement recognition.</p>
+    <p>When you upload personal record videos or other media to SyzUp, you grant us a license as described in our <a href="terms.html" class="xdoc">Terms of Service</a>. In addition to displaying your content within the app's social features, we may use <strong>de-identified</strong> video content (with all personally identifying information such as faces, names, and metadata removed) for the purpose of training machine learning models to improve features such as exercise form analysis, technique feedback, and movement recognition.</p>
     <p>We will <strong>never</strong> use your identifiable videos, images, or media in marketing materials, sell them to third parties, or make them available outside of SyzUp without your explicit, separate consent.</p>
 
     <h3>5.2 Workout &amp; Performance Data</h3>
@@ -428,13 +449,2194 @@
     </div>
     <p>We aim to respond to all requests within 30 days (45 days for CCPA requests).</p>
   </section>
+</div>
 
+<div class="lang-doc" data-lang="pl">
+
+<section>
+<p>Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób SyzUp ("my", "nas", "nasze", "aplikacja") zbiera, wykorzystuje, przechowuje i chroni Twoje dane osobowe. SyzUp jest prowadzony z terytorium Unii Europejskiej i obsługuje użytkowników na całym świecie. Niniejsza polityka obowiązuje niezależnie od tego, skąd korzystasz z aplikacji.</p>
+<p>Korzystając z SyzUp, potwierdzasz, że zapoznałeś(-aś) się z niniejszą Polityką Prywatności i ją rozumiesz. Jeśli się z nią nie zgadzasz, nie korzystaj z aplikacji.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Administrator danych</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>E-mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Działalność prowadzona z: Polska, Unia Europejska</p>
+</div>
+<p>Dla celów RODO administratorem danych jest indywidualny operator SyzUp, z którym można skontaktować się pod powyższym adresem e-mail.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Jakie dane zbieramy</h2>
+<h3>2.1 Dane konta</h3>
+<ul>
+<li>Adres e-mail</li>
+<li>Nazwa wyświetlana (pseudonim)</li>
+<li>Awatar profilu (jeśli został przesłany)</li>
+<li>Dane uwierzytelniające z logowania przez Google lub Apple</li>
+</ul>
+<h3>2.2 Dane fitness i dane związane ze zdrowiem</h3>
+<div class="warning">
+<div class="warning-title">Informacja o danych wrażliwych</div>
+<p>Dane fitness i pomiary ciała mogą kwalifikować się jako dane dotyczące zdrowia w rozumieniu niektórych przepisów (w tym art. 9 RODO). Dobrowolnie wprowadzając te dane, wyrażasz wyraźną zgodę na ich przetwarzanie zgodnie z niniejszą polityką. Zgodę możesz wycofać w dowolnym momencie, usuwając swoje dane lub konto.</p>
+</div>
+<ul>
+<li>Sesje treningowe (ćwiczenia, serie, powtórzenia, podnoszony ciężar)</li>
+<li>Plany treningowe i preferencje</li>
+<li>Rekordy osobiste (PR)</li>
+<li>Wpisy masy ciała</li>
+<li>Postępy w ćwiczeniach, dane XP i poziomu</li>
+<li>Statystyki i historia treningów</li>
+<li>Szacunki regeneracji mięśni</li>
+</ul>
+<h3>2.3 Dane o urządzeniu i użytkowaniu</h3>
+<ul>
+<li>Typ urządzenia i wersja systemu operacyjnego</li>
+<li>Wersja i numer kompilacji aplikacji</li>
+<li>Raporty o awariach i dane wydajności (Firebase Crashlytics)</li>
+<li>Zanonimizowane zdarzenia analityczne (Firebase Analytics)</li>
+<li>Identyfikator reklamowy (dla AdMob, tylko wersja bezpłatna)</li>
+</ul>
+<h3>2.4 Media i treści użytkowników</h3>
+<ul>
+<li>Zdjęcia profilowe (aparat lub galeria)</li>
+<li>Nagrania rekordów osobistych (opcjonalnie)</li>
+<li>Posty i komentarze w feedzie społecznościowym</li>
+<li>Wiadomości czatu między użytkownikami</li>
+</ul>
+<h3>2.5 Dane społecznościowe</h3>
+<ul>
+<li>Relacje obserwowania (obserwujący/obserwowani)</li>
+<li>Interakcje z publicznymi profilami (polubienia, komentarze)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Podstawy prawne przetwarzania</h2>
+<p>W przypadku użytkowników z Europejskiego Obszaru Gospodarczego (EOG), Wielkiej Brytanii i Szwajcarii przetwarzamy dane na podstawie RODO:</p>
+<table>
+<tr><th>Podstawa prawna</th><th>Dane i cel</th></tr>
+<tr><td><strong>Umowa</strong> (art. 6 ust. 1 lit. b)</td><td>Dane konta i dane fitness — niezbędne do świadczenia usługi śledzenia treningów.</td></tr>
+<tr><td><strong>Wyraźna zgoda</strong> (art. 9 ust. 2 lit. a)</td><td>Dane dotyczące zdrowia (masa ciała, parametry treningowe) — wprowadzane dobrowolnie. Zgodę można wycofać w każdej chwili.</td></tr>
+<tr><td><strong>Prawnie uzasadniony interes</strong> (art. 6 ust. 1 lit. f)</td><td>Raporty o awariach, analityka, dane zanonimizowane na potrzeby ulepszania produktu i badań — w celu utrzymania, zabezpieczenia i ulepszania aplikacji.</td></tr>
+<tr><td><strong>Zgoda</strong> (art. 6 ust. 1 lit. a)</td><td>Identyfikator reklamowy dla AdMob, powiadomienia push — możliwość rezygnacji w ustawieniach urządzenia.</td></tr>
+</table>
+<p>W przypadku użytkowników spoza EOG przetwarzamy dane zgodnie z niniejszą polityką oraz obowiązującymi przepisami lokalnymi.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Jak wykorzystujemy Twoje dane</h2>
+<table>
+<tr><th>Cel</th><th>Wykorzystywane dane</th></tr>
+<tr><td>Śledzenie treningów</td><td>Dane fitness, dane konta</td></tr>
+<tr><td>Funkcje społecznościowe (rankingi, feed, czat)</td><td>Pseudonim, awatar, statystyki treningowe</td></tr>
+<tr><td>Grywalizacja (XP, poziomy, rangi)</td><td>Dane treningowe, postępy w ćwiczeniach</td></tr>
+<tr><td>Generowanie planów treningowych przez AI</td><td>Preferencje treningowe (po stronie serwera, nieprzechowywane przez dostawcę AI)</td></tr>
+<tr><td>Powiadomienia push</td><td>Token FCM, preferencje</td></tr>
+<tr><td>Naprawa błędów i ulepszenia</td><td>Raporty o awariach, zanonimizowana analityka</td></tr>
+<tr><td>Reklamy (wersja bezpłatna)</td><td>Identyfikator reklamowy przez AdMob</td></tr>
+</table>
+<h3>4.1 Dane zanonimizowane i zagregowane</h3>
+<div class="card">
+<div class="card-title">Ważne</div>
+<p>Możemy wykorzystywać dane zanonimizowane, pozbawione danych identyfikujących i zagregowane (dane, które nie pozwalają już na Twoją identyfikację) w dowolnym zgodnym z prawem celu, w tym między innymi do:</p>
+<ul>
+<li>ulepszania produktu, rozwoju funkcji i badań,</li>
+<li>trenowania i ulepszania modeli uczenia maszynowego oraz funkcji AI (np. lepsze rekomendacje ćwiczeń, analiza techniki, doskonalenie ruchu),</li>
+<li>tworzenia zbiorczych statystyk i benchmarków (np. średnie wyniki dla danego ćwiczenia),</li>
+<li>analityki biznesowej i raportowania.</li>
+</ul>
+<p>Te zanonimizowane dane <strong>nigdy nie zawierają</strong> Twojego imienia i nazwiska, adresu e-mail, pseudonimu, zdjęcia profilowego ani żadnych informacji umożliwiających identyfikację. Po zanonimizowaniu dane przestają być danymi osobowymi w rozumieniu RODO i innych przepisów o ochronie prywatności, a niniejsza polityka nie ogranicza ich wykorzystania.</p>
+</div>
+<p><strong>Nie</strong> wykorzystujemy Twoich identyfikowalnych danych fitness, historii treningów ani pomiarów ciała do celów reklamowych. AdMob otrzymuje wyłącznie standardowe identyfikatory na poziomie urządzenia.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Treści użytkowników i trenowanie AI</h2>
+<h3>5.1 Wideo i media</h3>
+<p>Przesyłając do SyzUp nagrania rekordów osobistych lub inne media, udzielasz nam licencji opisanej w naszym <a href="terms.html" class="xdoc">Regulaminie</a>. Oprócz wyświetlania Twoich treści w funkcjach społecznościowych aplikacji, możemy wykorzystywać <strong>pozbawione danych identyfikujących</strong> treści wideo (z usuniętymi wszystkimi informacjami umożliwiającymi identyfikację, takimi jak twarze, imiona i metadane) do trenowania modeli uczenia maszynowego w celu ulepszania funkcji takich jak analiza techniki ćwiczeń, informacje zwrotne o technice i rozpoznawanie ruchu.</p>
+<p><strong>Nigdy</strong> nie wykorzystamy Twoich identyfikowalnych nagrań, zdjęć ani mediów w materiałach marketingowych, nie sprzedamy ich podmiotom trzecim ani nie udostępnimy poza SyzUp bez Twojej wyraźnej, odrębnej zgody.</p>
+<h3>5.2 Dane treningowe i wynikowe</h3>
+<p>Zanonimizowane statystyki treningowe (np. częstotliwość ćwiczeń, wzorce objętości, krzywe progresji) mogą być wykorzystywane do ulepszania planów treningowych generowanych przez AI, rozwoju nowych funkcji i tworzenia zbiorczych benchmarków. Przed wykorzystaniem dane te są pozbawiane wszystkich identyfikatorów osobistych.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Usługi podmiotów trzecich</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Uwierzytelnianie, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Dane przechowywane w <strong>UE (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Prywatność Firebase →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">Google DPA →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Reklamy w wersji bezpłatnej. Otrzymuje wyłącznie identyfikatory urządzenia. Żadne dane fitness ani zdrowotne nie są udostępniane.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Prywatność Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Zarządzanie subskrypcjami poprzez Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">Prywatność RevenueCat →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (przez Cloud Functions)</div>
+<p>Generowanie treningów przez AI odbywa się po stronie serwera. Preferencje treningowe są przesyłane w celu wygenerowania planów, ale nie są przechowywane przez OpenAI. Żadne dane osobowe nie są przekazywane.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">Prywatność OpenAI →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Przechowywanie danych i bezpieczeństwo</h2>
+<p>Podstawowe miejsce przechowywania danych: Firebase (Google Cloud), <strong>Unia Europejska</strong>.</p>
+<ul>
+<li>Reguły bezpieczeństwa Firebase — dostęp ograniczony do właścicieli danych</li>
+<li>Firebase App Check — zapobiega nieautoryzowanemu dostępowi do API</li>
+<li>Szyfrowany lokalny magazyn AES (Hive z kluczami z systemowego keychaina)</li>
+<li>Ograniczanie liczby żądań i logowanie zdarzeń bezpieczeństwa po stronie serwera</li>
+<li>HTTPS/TLS dla całej komunikacji sieciowej</li>
+<li>Brak przechowywania haseł w postaci jawnej</li>
+</ul>
+<h3>Przekazywanie danych poza EOG</h3>
+<p>Niektóre usługi (Crashlytics, AdMob) mogą przetwarzać dane w Stanach Zjednoczonych. W przypadku użytkowników z EOG/Wielkiej Brytanii przekazywanie danych jest zabezpieczone standardowymi klauzulami umownymi (SCC). Zapewniamy, że przekazywane dane wszystkich użytkowników objęte są zasadniczo równoważną ochroną niezależnie od miejsca docelowego.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Okres przechowywania danych</h2>
+<table>
+<tr><th>Rodzaj danych</th><th>Okres przechowywania</th></tr>
+<tr><td>Dane konta i dane fitness</td><td>Do usunięcia konta</td></tr>
+<tr><td>Wiadomości czatu</td><td>Do usunięcia wiadomości lub konta</td></tr>
+<tr><td>Raporty o awariach</td><td>90 dni</td></tr>
+<tr><td>Analityka</td><td>14 miesięcy</td></tr>
+<tr><td>Logi bezpieczeństwa</td><td>30 dni</td></tr>
+<tr><td>Po usunięciu konta</td><td>Wszystkie dane osobowe usuwane w ciągu 30 dni</td></tr>
+<tr><td>Dane zanonimizowane/zagregowane</td><td>Przechowywane bezterminowo (nie są danymi osobowymi)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Udostępnianie danych</h2>
+<p><strong>Nie sprzedajemy Twoich danych osobowych.</strong> Nie udostępniamy Twoich danych osobowych podmiotom trzecim do ich własnych celów marketingowych.</p>
+<ul>
+<li><strong>Funkcje społecznościowe:</strong> pseudonim, awatar, ranga i statystyki widoczne zgodnie z Twoim ustawieniem prywatności (publiczne/znajomi/prywatne).</li>
+<li><strong>Reklamy:</strong> AdMob otrzymuje wyłącznie identyfikatory urządzenia. Żadnych danych fitness ani zdrowotnych.</li>
+<li><strong>Dostawcy usług:</strong> podmioty przetwarzające wymienione w sekcji 6, wyłącznie w celu świadczenia usług, na podstawie umów powierzenia przetwarzania danych.</li>
+<li><strong>Wymogi prawne:</strong> jeśli wymaga tego prawo, regulacje, postępowanie sądowe lub żądanie organu państwowego.</li>
+<li><strong>Dane zanonimizowane:</strong> pozbawione danych identyfikujących, zagregowane dane mogą być udostępniane do celów badawczych, benchmarkingowych lub biznesowych, ale dane te nie pozwalają na Twoją identyfikację.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> Twoje prawa</h2>
+<h3>10.1 Wszyscy użytkownicy</h3>
+<p>Niezależnie od miejsca zamieszkania możesz:</p>
+<ul>
+<li>przeglądać swoje dane osobowe w aplikacji,</li>
+<li>w każdej chwili poprawiać dane swojego profilu,</li>
+<li>usunąć konto wraz ze wszystkimi powiązanymi danymi (Ustawienia → Konto → Usuń konto),</li>
+<li>zrezygnować z powiadomień push w ustawieniach urządzenia,</li>
+<li>zrezygnować z reklam spersonalizowanych w ustawieniach urządzenia,</li>
+<li>kontrolować swoją widoczność społecznościową w ustawieniach trybu prywatności,</li>
+<li>skontaktować się z nami w każdej sprawie dotyczącej danych.</li>
+</ul>
+<h3>10.2 Europejski Obszar Gospodarczy, Wielka Brytania i Szwajcaria (RODO)</h3>
+<p>Dodatkowo przysługują Ci prawa do:</p>
+<ul>
+<li><strong>Dostępu (art. 15):</strong> żądania pełnej kopii swoich danych osobowych.</li>
+<li><strong>Sprostowania (art. 16):</strong> poprawienia nieprawidłowych danych.</li>
+<li><strong>Usunięcia (art. 17):</strong> żądania całkowitego usunięcia danych.</li>
+<li><strong>Ograniczenia przetwarzania (art. 18):</strong> ograniczenia przetwarzania w określonych przypadkach.</li>
+<li><strong>Przenoszenia danych (art. 20):</strong> otrzymania danych w formacie nadającym się do odczytu maszynowego.</li>
+<li><strong>Sprzeciwu (art. 21):</strong> sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie.</li>
+<li><strong>Wycofania zgody (art. 7 ust. 3):</strong> w dowolnym momencie, bez wpływu na zgodność z prawem wcześniejszego przetwarzania.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Organ nadzorczy</div>
+<p>Masz prawo wnieść skargę do organu nadzorczego. W Polsce: Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. Możesz również skontaktować się z organem w swoim kraju zamieszkania.</p>
+</div>
+<h3>10.3 Mieszkańcy Kalifornii (CCPA/CPRA)</h3>
+<p>Jeśli mieszkasz w Kalifornii, przysługują Ci dodatkowe prawa na podstawie California Consumer Privacy Act (CCPA) i California Privacy Rights Act (CPRA):</p>
+<ul>
+<li><strong>Prawo do informacji:</strong> jakie dane osobowe zbieramy, wykorzystujemy i ujawniamy.</li>
+<li><strong>Prawo do usunięcia:</strong> żądania usunięcia Twoich danych osobowych.</li>
+<li><strong>Prawo do rezygnacji ze sprzedaży:</strong> nie sprzedajemy Twoich danych osobowych. Nie udostępniamy danych osobowych do celów reklamy behawioralnej w różnych kontekstach.</li>
+<li><strong>Prawo do niedyskryminacji:</strong> nie będziemy Cię dyskryminować za korzystanie ze swoich praw.</li>
+<li><strong>Prawo do sprostowania:</strong> poprawienia nieprawidłowych danych osobowych.</li>
+<li><strong>Prawo do ograniczenia wykorzystania wrażliwych danych osobowych:</strong> możesz ograniczyć wykorzystanie danych fitness związanych ze zdrowiem do zakresu niezbędnego do świadczenia usługi.</li>
+</ul>
+<p>Aby skorzystać z tych praw, skontaktuj się z nami pod adresem e-mail podanym w sekcji 1. Zweryfikujemy Twoją tożsamość i odpowiemy w ciągu 45 dni.</p>
+<p><strong>Kategorie zbieranych danych osobowych</strong> (zgodnie z CCPA §1798.110): identyfikatory (e-mail, pseudonim), informacje związane ze zdrowiem (dane fitness, masa ciała), aktywność internetowa/elektroniczna (analityka użytkowania, dane o awariach), geolokalizacja (wyłącznie na poziomie kraju) oraz informacje audiowizualne (zdjęcia profilowe, nagrania rekordów).</p>
+<h3>10.4 Pozostałe jurysdykcje</h3>
+<p>Jeśli mieszkasz w jurysdykcji z przepisami o ochronie danych (w tym m.in. brazylijskie LGPD, kanadyjskie PIPEDA, australijski Privacy Act, japońskie APPI, południowokoreańskie PIPA), zrealizujemy przysługujące Ci prawa na Twój wniosek. Skontaktuj się z nami pod adresem e-mail podanym w sekcji 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Usunięcie konta</h2>
+<ul>
+<li><strong>W aplikacji:</strong> Ustawienia → Konto → Usuń konto</li>
+<li><strong>E-mailem:</strong> temat "Account Deletion Request"</li>
+</ul>
+<p>Wszystkie dane osobowe są trwale usuwane w ciągu 30 dni, w tym: profil, treningi, plany, czaty, rekordy, nagrania i tokeny FCM. Zanonimizowane dane zbiorcze, które nie pozwalają na Twoją identyfikację, mogą zostać zachowane.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Prywatność dzieci</h2>
+<p>SyzUp nie jest przeznaczony dla dzieci poniżej 16. roku życia (lub poniżej wieku zgody cyfrowej obowiązującego w danej jurysdykcji). Świadomie nie zbieramy danych od dzieci. Jeśli dowiemy się, że dziecko przekazało nam dane osobowe, niezwłocznie je usuniemy. Rodzice mogą skontaktować się z nami w celu żądania usunięcia danych.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Reklamy</h2>
+<ul>
+<li><strong>Android:</strong> Ustawienia → Prywatność → Reklamy → "Zrezygnuj z personalizacji reklam"</li>
+<li>W wersji bezpłatnej nadal będą wyświetlane reklamy niespersonalizowane.</li>
+<li>Subskrybenci wersji premium nie widzą reklam.</li>
+</ul>
+<p>Nie wykorzystujemy danych zdrowotnych ani fitness do targetowania reklam. AdMob otrzymuje wyłącznie standardowe identyfikatory urządzenia.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Sygnały "Do Not Track"</h2>
+<p>SyzUp jest aplikacją mobilną i nie reaguje na przeglądarkowe sygnały "Do Not Track". Możesz jednak kontrolować zbieranie danych za pomocą mechanizmów rezygnacji opisanych w niniejszej polityce (personalizacja reklam, powiadomienia push, tryb prywatności).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Zmiany niniejszej polityki</h2>
+<p>O istotnych zmianach poinformujemy Cię za pośrednictwem powiadomienia w aplikacji co najmniej 14 dni przed ich wejściem w życie. Dalsze korzystanie z aplikacji po dacie wejścia zmian w życie oznacza ich akceptację. Jeśli się nie zgadzasz, usuń swoje konto przed datą wejścia zmian w życie.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Kontakt</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Administrator danych)</p>
+<p>E-mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Działalność prowadzona z: Polska, UE</p>
+</div>
+<p>Staramy się odpowiadać na wszystkie wnioski w ciągu 30 dni (45 dni w przypadku wniosków CCPA).</p>
+</section>
+
+</div>
+
+<div class="lang-doc" data-lang="de">
+
+<section>
+<p class="conv-note">Diese Übersetzung dient ausschließlich Ihrer Information. Im Falle von Abweichungen ist die englische Fassung maßgeblich (für Verbraucher mit Wohnsitz in Polen die polnische Fassung).</p>
+<p>Diese Datenschutzerklärung erläutert, wie SyzUp ("wir", "uns", "unser", "die App") Ihre personenbezogenen Daten erhebt, verwendet, speichert und schützt. SyzUp wird aus der Europäischen Union betrieben und bedient Nutzer weltweit. Diese Erklärung gilt unabhängig davon, von wo aus Sie auf die App zugreifen.</p>
+<p>Durch die Nutzung von SyzUp bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen und verstanden haben. Wenn Sie nicht einverstanden sind, nutzen Sie die App bitte nicht.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Verantwortlicher</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>E-Mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Betrieben aus: Polen, Europäische Union</p>
+</div>
+<p>Im Sinne der DSGVO ist der Verantwortliche der individuelle Betreiber von SyzUp, erreichbar unter der oben genannten E-Mail-Adresse.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Welche Daten wir erheben</h2>
+<h3>2.1 Kontodaten</h3>
+<ul>
+<li>E-Mail-Adresse</li>
+<li>Anzeigename (Nickname)</li>
+<li>Profilbild (falls hochgeladen)</li>
+<li>Authentifizierungsdaten von Google Sign-In oder Apple Sign-In</li>
+</ul>
+<h3>2.2 Fitness- und gesundheitsbezogene Daten</h3>
+<div class="warning">
+<div class="warning-title">Hinweis zu sensiblen Daten</div>
+<p>Fitness- und Körpermessdaten können nach bestimmten Gesetzen (einschließlich Art. 9 DSGVO) als gesundheitsbezogene Daten gelten. Durch die freiwillige Eingabe dieser Daten erteilen Sie Ihre ausdrückliche Einwilligung in deren Verarbeitung gemäß dieser Erklärung. Sie können die Einwilligung jederzeit widerrufen, indem Sie Ihre Daten oder Ihr Konto löschen.</p>
+</div>
+<ul>
+<li>Trainingseinheiten (Übungen, Sätze, Wiederholungen, bewegtes Gewicht)</li>
+<li>Trainingspläne und Präferenzen</li>
+<li>Persönliche Rekorde (PRs)</li>
+<li>Körpergewichtseinträge</li>
+<li>Übungsfortschritt, XP- und Level-Daten</li>
+<li>Trainingsstatistiken und -verlauf</li>
+<li>Schätzungen zur Muskelregeneration</li>
+</ul>
+<h3>2.3 Geräte- und Nutzungsdaten</h3>
+<ul>
+<li>Gerätetyp und Betriebssystemversion</li>
+<li>App-Version und Build-Nummer</li>
+<li>Absturzberichte und Leistungsdaten (Firebase Crashlytics)</li>
+<li>Anonymisierte Analyse-Events (Firebase Analytics)</li>
+<li>Werbe-ID (für AdMob, nur kostenlose Version)</li>
+</ul>
+<h3>2.4 Medien und nutzergenerierte Inhalte</h3>
+<ul>
+<li>Profilfotos (Kamera oder Fotobibliothek)</li>
+<li>Videos persönlicher Rekorde (optional)</li>
+<li>Beiträge und Kommentare im Social Feed</li>
+<li>Chat-Nachrichten zwischen Nutzern</li>
+</ul>
+<h3>2.5 Soziale Daten</h3>
+<ul>
+<li>Follower-Beziehungen</li>
+<li>Interaktionen mit öffentlichen Profilen (Likes, Kommentare)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Rechtsgrundlagen der Verarbeitung</h2>
+<p>Für Nutzer im Europäischen Wirtschaftsraum (EWR), im Vereinigten Königreich und in der Schweiz verarbeiten wir Daten gemäß der DSGVO:</p>
+<table>
+<tr><th>Rechtsgrundlage</th><th>Daten &amp; Zweck</th></tr>
+<tr><td><strong>Vertrag</strong> (Art. 6 Abs. 1 lit. b)</td><td>Konto- und Fitnessdaten — erforderlich zur Bereitstellung des Trainings-Tracking-Dienstes.</td></tr>
+<tr><td><strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a)</td><td>Gesundheitsbezogene Daten (Körpergewicht, Trainingsmetriken) — freiwillig eingegeben. Jederzeit widerrufbar.</td></tr>
+<tr><td><strong>Berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f)</td><td>Absturzberichte, Analysen, anonymisierte Daten für Produktverbesserung und Forschung — zur Wartung, Sicherung und Verbesserung der App.</td></tr>
+<tr><td><strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a)</td><td>Werbe-ID für AdMob, Push-Benachrichtigungen — Opt-out über die Geräteeinstellungen möglich.</td></tr>
+</table>
+<p>Für Nutzer außerhalb des EWR verarbeiten wir Daten wie in dieser Erklärung beschrieben und im Einklang mit den geltenden lokalen Gesetzen.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Wie wir Ihre Daten verwenden</h2>
+<table>
+<tr><th>Zweck</th><th>Verwendete Daten</th></tr>
+<tr><td>Trainings-Tracking</td><td>Fitnessdaten, Kontoinformationen</td></tr>
+<tr><td>Soziale Funktionen (Ranglisten, Feed, Chat)</td><td>Nickname, Avatar, Trainingsstatistiken</td></tr>
+<tr><td>Gamification (XP, Level, Ränge)</td><td>Trainingsdaten, Übungsfortschritt</td></tr>
+<tr><td>KI-Trainingsplan-Generierung</td><td>Fitnesspräferenzen (serverseitig, nicht vom KI-Anbieter gespeichert)</td></tr>
+<tr><td>Push-Benachrichtigungen</td><td>FCM-Token, Präferenzen</td></tr>
+<tr><td>Fehlerbehebung und Verbesserung</td><td>Absturzberichte, anonymisierte Analysen</td></tr>
+<tr><td>Werbung (kostenlose Version)</td><td>Werbe-ID über AdMob</td></tr>
+</table>
+<h3>4.1 Anonymisierte &amp; aggregierte Daten</h3>
+<div class="card">
+<div class="card-title">Wichtig</div>
+<p>Wir können anonymisierte, entidentifizierte und aggregierte Daten (Daten, die Sie nicht mehr persönlich identifizieren können) für jeden rechtmäßigen Zweck verwenden, einschließlich, aber nicht beschränkt auf:</p>
+<ul>
+<li>Produktverbesserung, Funktionsentwicklung und Forschung</li>
+<li>Training und Verbesserung von Machine-Learning-Modellen und KI-Funktionen (z. B. bessere Übungsempfehlungen, Analyse der Ausführung, Technikverbesserung)</li>
+<li>Erstellung aggregierter Statistiken und Benchmarks (z. B. Durchschnittsleistung pro Übung)</li>
+<li>Geschäftsanalysen und Berichterstattung</li>
+</ul>
+<p>Diese anonymisierten Daten enthalten <strong>niemals</strong> Ihren Namen, Ihre E-Mail-Adresse, Ihren Nickname, Ihr Profilfoto oder sonstige Informationen, die Sie identifizieren könnten. Sobald Daten anonymisiert sind, gelten sie nach der DSGVO und anderen Datenschutzgesetzen nicht mehr als personenbezogene Daten, und diese Erklärung beschränkt ihre Verwendung nicht.</p>
+</div>
+<p>Wir verwenden Ihre identifizierbaren Fitnessdaten, Ihren Trainingsverlauf oder Ihre Körpermessungen <strong>nicht</strong> für Werbezwecke. AdMob erhält nur standardmäßige Kennungen auf Geräteebene.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Nutzergenerierte Inhalte &amp; KI-Training</h2>
+<h3>5.1 Videos &amp; Medien</h3>
+<p>Wenn Sie Videos persönlicher Rekorde oder andere Medien in SyzUp hochladen, gewähren Sie uns eine Lizenz gemäß unseren <a href="terms.html" class="xdoc">Nutzungsbedingungen</a>. Zusätzlich zur Anzeige Ihrer Inhalte in den sozialen Funktionen der App können wir <strong>entidentifizierte</strong> Videoinhalte (bei denen alle personenbezogenen Informationen wie Gesichter, Namen und Metadaten entfernt wurden) zum Training von Machine-Learning-Modellen verwenden, um Funktionen wie die Analyse der Übungsausführung, Technik-Feedback und Bewegungserkennung zu verbessern.</p>
+<p>Wir werden Ihre identifizierbaren Videos, Bilder oder Medien <strong>niemals</strong> in Marketingmaterialien verwenden, an Dritte verkaufen oder außerhalb von SyzUp verfügbar machen — ohne Ihre ausdrückliche, gesonderte Einwilligung.</p>
+<h3>5.2 Trainings- &amp; Leistungsdaten</h3>
+<p>Anonymisierte Trainingsstatistiken (z. B. Übungshäufigkeit, Volumenmuster, Progressionskurven) können zur Verbesserung KI-generierter Trainingspläne, zur Entwicklung neuer Funktionen und zur Erstellung aggregierter Benchmarks verwendet werden. Diese Daten werden vor der Verwendung von allen persönlichen Kennungen befreit.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Drittanbieterdienste</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Authentifizierung, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Datenspeicherung in der <strong>EU (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase-Datenschutz →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">Google DPA →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Werbung in der kostenlosen Version. Erhält ausschließlich Gerätekennungen. Keine Fitness- oder Gesundheitsdaten werden weitergegeben.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Google-Datenschutz →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Abonnementverwaltung über Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat-Datenschutz →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (über Cloud Functions)</div>
+<p>Die KI-Trainingsgenerierung erfolgt serverseitig. Fitnesspräferenzen werden zur Planerstellung übermittelt, aber nicht von OpenAI gespeichert. Es werden keine personenbezogenen Daten übertragen.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI-Datenschutz →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Datenspeicherung &amp; Sicherheit</h2>
+<p>Primäre Datenspeicherung: Firebase (Google Cloud), <strong>Europäische Union</strong>.</p>
+<ul>
+<li>Firebase Security Rules — Zugriff nur für Dateneigentümer</li>
+<li>Firebase App Check — verhindert unbefugten API-Zugriff</li>
+<li>AES-verschlüsselter lokaler Speicher (Hive mit Plattform-Keychain-Schlüsseln)</li>
+<li>Serverseitige Ratenbegrenzung und Sicherheitsprotokollierung</li>
+<li>HTTPS/TLS für die gesamte Netzwerkkommunikation</li>
+<li>Keine Passwortspeicherung im Klartext</li>
+</ul>
+<h3>Internationale Datenübermittlungen</h3>
+<p>Einige Dienste (Crashlytics, AdMob) können Daten in den Vereinigten Staaten verarbeiten. Für Nutzer im EWR/UK sind diese Übermittlungen durch Standardvertragsklauseln (SCCs) geschützt. Für alle Nutzer stellen wir sicher, dass übermittelte Daten unabhängig vom Zielort einen im Wesentlichen gleichwertigen Schutz erhalten.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Speicherfristen</h2>
+<table>
+<tr><th>Datenart</th><th>Speicherdauer</th></tr>
+<tr><td>Konto- &amp; Fitnessdaten</td><td>Bis zur Kontolöschung</td></tr>
+<tr><td>Chat-Nachrichten</td><td>Bis zur Löschung oder Kontolöschung</td></tr>
+<tr><td>Absturzberichte</td><td>90 Tage</td></tr>
+<tr><td>Analysen</td><td>14 Monate</td></tr>
+<tr><td>Sicherheitsprotokolle</td><td>30 Tage</td></tr>
+<tr><td>Nach Kontolöschung</td><td>Alle personenbezogenen Daten werden innerhalb von 30 Tagen entfernt</td></tr>
+<tr><td>Anonymisierte/aggregierte Daten</td><td>Unbegrenzt aufbewahrt (keine personenbezogenen Daten)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Datenweitergabe</h2>
+<p><strong>Wir verkaufen Ihre personenbezogenen Daten nicht.</strong> Wir geben Ihre personenbezogenen Daten nicht zu deren eigenen Marketingzwecken an Dritte weiter.</p>
+<ul>
+<li><strong>Soziale Funktionen:</strong> Nickname, Avatar, Rang und Statistiken sind je nach Ihrer Privatsphäre-Einstellung sichtbar (öffentlich/Freunde/privat).</li>
+<li><strong>Werbung:</strong> AdMob erhält ausschließlich Gerätekennungen. Keine Fitness- oder Gesundheitsdaten.</li>
+<li><strong>Dienstleister:</strong> Die in Abschnitt 6 genannten Auftragsverarbeiter, ausschließlich zur Leistungserbringung auf Grundlage von Auftragsverarbeitungsverträgen.</li>
+<li><strong>Rechtliche Gründe:</strong> Wenn Gesetze, Vorschriften, rechtliche Verfahren oder behördliche Anfragen dies erfordern.</li>
+<li><strong>Anonymisierte Daten:</strong> Entidentifizierte, aggregierte Daten können für Forschung, Benchmarking oder geschäftliche Zwecke weitergegeben werden; diese Daten können Sie jedoch nicht identifizieren.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> Ihre Rechte</h2>
+<h3>10.1 Alle Nutzer</h3>
+<p>Unabhängig von Ihrem Wohnort können Sie:</p>
+<ul>
+<li>Ihre personenbezogenen Daten in der App einsehen und überprüfen</li>
+<li>Ihre Profilinformationen jederzeit korrigieren</li>
+<li>Ihr Konto und alle zugehörigen Daten löschen (Einstellungen → Konto → Konto löschen)</li>
+<li>Push-Benachrichtigungen über die Geräteeinstellungen deaktivieren</li>
+<li>Personalisierte Werbung über die Geräteeinstellungen deaktivieren</li>
+<li>Ihre soziale Sichtbarkeit über die Privatsphäre-Einstellungen steuern</li>
+<li>Uns mit jedem datenbezogenen Anliegen kontaktieren</li>
+</ul>
+<h3>10.2 Europäischer Wirtschaftsraum, UK &amp; Schweiz (DSGVO)</h3>
+<p>Zusätzlich haben Sie das Recht auf:</p>
+<ul>
+<li><strong>Auskunft (Art. 15):</strong> Anforderung einer vollständigen Kopie Ihrer personenbezogenen Daten.</li>
+<li><strong>Berichtigung (Art. 16):</strong> Korrektur unrichtiger Daten.</li>
+<li><strong>Löschung (Art. 17):</strong> Verlangen der vollständigen Löschung.</li>
+<li><strong>Einschränkung (Art. 18):</strong> Einschränkung der Verarbeitung in bestimmten Fällen.</li>
+<li><strong>Datenübertragbarkeit (Art. 20):</strong> Erhalt der Daten in einem maschinenlesbaren Format.</li>
+<li><strong>Widerspruch (Art. 21):</strong> Widerspruch gegen Verarbeitung auf Grundlage berechtigten Interesses.</li>
+<li><strong>Widerruf der Einwilligung (Art. 7 Abs. 3):</strong> Jederzeit, ohne die Rechtmäßigkeit der bisherigen Verarbeitung zu berühren.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Aufsichtsbehörde</div>
+<p>Sie können Beschwerde bei einer Aufsichtsbehörde einlegen. In Polen: Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. Sie können sich auch an die Behörde Ihres Wohnsitzlandes wenden.</p>
+</div>
+<h3>10.3 Einwohner Kaliforniens (CCPA/CPRA)</h3>
+<p>Wenn Sie in Kalifornien wohnen, haben Sie zusätzliche Rechte nach dem California Consumer Privacy Act (CCPA) und dem California Privacy Rights Act (CPRA):</p>
+<ul>
+<li><strong>Recht auf Auskunft:</strong> Welche personenbezogenen Daten wir erheben, verwenden und offenlegen.</li>
+<li><strong>Recht auf Löschung:</strong> Verlangen der Löschung Ihrer personenbezogenen Daten.</li>
+<li><strong>Recht auf Opt-out vom Verkauf:</strong> Wir verkaufen Ihre personenbezogenen Daten nicht. Wir geben keine personenbezogenen Daten für kontextübergreifende verhaltensbasierte Werbung weiter.</li>
+<li><strong>Recht auf Nichtdiskriminierung:</strong> Wir benachteiligen Sie nicht für die Ausübung Ihrer Rechte.</li>
+<li><strong>Recht auf Berichtigung:</strong> Korrektur unrichtiger personenbezogener Daten.</li>
+<li><strong>Recht auf Beschränkung der Nutzung sensibler personenbezogener Daten:</strong> Sie können die Nutzung gesundheitsbezogener Fitnessdaten auf das für den Dienst Erforderliche beschränken.</li>
+</ul>
+<p>Zur Ausübung dieser Rechte kontaktieren Sie uns unter der E-Mail-Adresse in Abschnitt 1. Wir verifizieren Ihre Identität und antworten innerhalb von 45 Tagen.</p>
+<p><strong>Kategorien erhobener personenbezogener Daten</strong> (gemäß CCPA §1798.110): Kennungen (E-Mail, Nickname), gesundheitsbezogene Informationen (Fitnessdaten, Körpergewicht), Internet-/elektronische Aktivität (Nutzungsanalysen, Absturzdaten), Geolokalisierung (nur auf Länderebene) sowie Audio-/visuelle Informationen (Profilfotos, PR-Videos).</p>
+<h3>10.4 Sonstige Jurisdiktionen</h3>
+<p>Wenn Sie in einer Jurisdiktion mit Datenschutzgesetzen wohnen (einschließlich, aber nicht beschränkt auf Brasiliens LGPD, Kanadas PIPEDA, Australiens Privacy Act, Japans APPI, Südkoreas PIPA), werden wir Ihre anwendbaren Rechte auf Anfrage erfüllen. Kontaktieren Sie uns unter der E-Mail-Adresse in Abschnitt 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Kontolöschung</h2>
+<ul>
+<li><strong>In der App:</strong> Einstellungen → Konto → Konto löschen</li>
+<li><strong>Per E-Mail:</strong> Betreff "Account Deletion Request"</li>
+</ul>
+<p>Alle personenbezogenen Daten werden innerhalb von 30 Tagen dauerhaft gelöscht, einschließlich: Profil, Trainings, Pläne, Chats, Rekorde, Videos und FCM-Token. Anonymisierte aggregierte Daten, die Sie nicht identifizieren können, können aufbewahrt werden.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Datenschutz von Kindern</h2>
+<p>SyzUp ist nicht für Kinder unter 16 Jahren bestimmt (bzw. unter dem in der jeweiligen Jurisdiktion geltenden digitalen Einwilligungsalter). Wir erheben wissentlich keine Daten von Kindern. Wenn wir erfahren, dass ein Kind personenbezogene Daten übermittelt hat, löschen wir diese umgehend. Eltern können uns kontaktieren, um die Löschung zu verlangen.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Werbung</h2>
+<ul>
+<li><strong>Android:</strong> Einstellungen → Datenschutz → Werbung → "Personalisierte Werbung deaktivieren"</li>
+<li>In der kostenlosen Version werden weiterhin nicht-personalisierte Anzeigen angezeigt.</li>
+<li>Premium-Abonnenten sehen keine Werbung.</li>
+</ul>
+<p>Wir verwenden keine Gesundheits- oder Fitnessdaten für Werbe-Targeting. AdMob erhält nur standardmäßige Gerätekennungen.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Do Not Track</h2>
+<p>SyzUp ist eine mobile Anwendung und reagiert nicht auf "Do Not Track"-Signale von Browsern. Sie können die Datenerhebung jedoch über die in dieser Erklärung beschriebenen Opt-out-Mechanismen steuern (Werbepersonalisierung, Push-Benachrichtigungen, Privatsphäre-Modus).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Änderungen dieser Erklärung</h2>
+<p>Über wesentliche Änderungen informieren wir Sie per In-App-Benachrichtigung mindestens 14 Tage vor deren Inkrafttreten. Die weitere Nutzung nach dem Stichtag gilt als Zustimmung. Wenn Sie nicht einverstanden sind, löschen Sie Ihr Konto vor dem Stichtag.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Kontakt</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Verantwortlicher)</p>
+<p>E-Mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Betrieben aus: Polen, EU</p>
+</div>
+<p>Wir bemühen uns, alle Anfragen innerhalb von 30 Tagen zu beantworten (45 Tage bei CCPA-Anfragen).</p>
+</section>
+
+</div>
+
+<div class="lang-doc" data-lang="es">
+
+<section>
+<p class="conv-note">Esta traducción se ofrece únicamente a título informativo. En caso de discrepancia, prevalece la versión en inglés (para los consumidores residentes en Polonia, la versión en polaco).</p>
+<p>Esta Política de Privacidad explica cómo SyzUp ("nosotros", "nos", "nuestro", "la app") recopila, usa, almacena y protege tus datos personales. SyzUp se opera desde la Unión Europea y atiende a usuarios de todo el mundo. Esta política se aplica independientemente de desde dónde accedas a la app.</p>
+<p>Al usar SyzUp, confirmas que has leído y comprendido esta Política de Privacidad. Si no estás de acuerdo, no uses la app.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Responsable del tratamiento</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>Correo electrónico: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Operado desde: Polonia, Unión Europea</p>
+</div>
+<p>A efectos del RGPD, el responsable del tratamiento es el operador individual de SyzUp, con quien puedes contactar en la dirección de correo indicada arriba.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Qué datos recopilamos</h2>
+<h3>2.1 Datos de la cuenta</h3>
+<ul>
+<li>Dirección de correo electrónico</li>
+<li>Nombre visible (apodo)</li>
+<li>Avatar del perfil (si se sube)</li>
+<li>Credenciales de autenticación de Google Sign-In o Apple Sign-In</li>
+</ul>
+<h3>2.2 Datos de fitness y relacionados con la salud</h3>
+<div class="warning">
+<div class="warning-title">Aviso sobre datos sensibles</div>
+<p>Los datos de fitness y las mediciones corporales pueden considerarse datos relativos a la salud según determinadas leyes (incluido el art. 9 del RGPD). Al introducir voluntariamente estos datos, otorgas tu consentimiento explícito para su tratamiento conforme a esta política. Puedes retirar el consentimiento en cualquier momento eliminando tus datos o tu cuenta.</p>
+</div>
+<ul>
+<li>Sesiones de entrenamiento (ejercicios, series, repeticiones, peso levantado)</li>
+<li>Planes de entrenamiento y preferencias</li>
+<li>Récords personales (PRs)</li>
+<li>Registros de peso corporal</li>
+<li>Progreso en ejercicios, datos de XP y nivel</li>
+<li>Estadísticas e historial de entrenamiento</li>
+<li>Estimaciones de recuperación muscular</li>
+</ul>
+<h3>2.3 Datos del dispositivo y de uso</h3>
+<ul>
+<li>Tipo de dispositivo y versión del sistema operativo</li>
+<li>Versión y número de compilación de la app</li>
+<li>Informes de fallos y datos de rendimiento (Firebase Crashlytics)</li>
+<li>Eventos de análisis anonimizados (Firebase Analytics)</li>
+<li>Identificador publicitario (para AdMob, solo nivel gratuito)</li>
+</ul>
+<h3>2.4 Medios y contenido generado por usuarios</h3>
+<ul>
+<li>Fotos de perfil (cámara o galería)</li>
+<li>Vídeos de récords personales (opcional)</li>
+<li>Publicaciones y comentarios en el feed social</li>
+<li>Mensajes de chat entre usuarios</li>
+</ul>
+<h3>2.5 Datos sociales</h3>
+<ul>
+<li>Relaciones de seguimiento (seguidores/seguidos)</li>
+<li>Interacciones con perfiles públicos (me gusta, comentarios)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Base jurídica del tratamiento</h2>
+<p>Para los usuarios del Espacio Económico Europeo (EEE), el Reino Unido y Suiza, tratamos los datos conforme al RGPD:</p>
+<table>
+<tr><th>Base jurídica</th><th>Datos y finalidad</th></tr>
+<tr><td><strong>Contrato</strong> (art. 6.1.b)</td><td>Datos de cuenta y fitness — necesarios para prestar el servicio de seguimiento de entrenamientos.</td></tr>
+<tr><td><strong>Consentimiento explícito</strong> (art. 9.2.a)</td><td>Datos relacionados con la salud (peso corporal, métricas de entrenamiento) — introducidos voluntariamente. Revocable en cualquier momento.</td></tr>
+<tr><td><strong>Interés legítimo</strong> (art. 6.1.f)</td><td>Informes de fallos, análisis, datos anonimizados para la mejora del producto e investigación — para mantener, proteger y mejorar la app.</td></tr>
+<tr><td><strong>Consentimiento</strong> (art. 6.1.a)</td><td>ID publicitario para AdMob, notificaciones push — con opción de exclusión en los ajustes del dispositivo.</td></tr>
+</table>
+<p>Para los usuarios fuera del EEE, tratamos los datos según lo descrito en esta política y de conformidad con la legislación local aplicable.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Cómo usamos tu información</h2>
+<table>
+<tr><th>Finalidad</th><th>Datos usados</th></tr>
+<tr><td>Experiencia de seguimiento de entrenamientos</td><td>Datos de fitness, información de la cuenta</td></tr>
+<tr><td>Funciones sociales (clasificaciones, feed, chat)</td><td>Apodo, avatar, estadísticas de entrenamiento</td></tr>
+<tr><td>Gamificación (XP, niveles, rangos)</td><td>Datos de entrenamiento, progreso en ejercicios</td></tr>
+<tr><td>Generación de planes de entrenamiento con IA</td><td>Preferencias de fitness (en el servidor, no almacenadas por el proveedor de IA)</td></tr>
+<tr><td>Notificaciones push</td><td>Token FCM, preferencias</td></tr>
+<tr><td>Corrección de errores y mejoras</td><td>Informes de fallos, análisis anonimizados</td></tr>
+<tr><td>Publicidad (nivel gratuito)</td><td>ID publicitario a través de AdMob</td></tr>
+</table>
+<h3>4.1 Datos anonimizados y agregados</h3>
+<div class="card">
+<div class="card-title">Importante</div>
+<p>Podemos usar datos anonimizados, desidentificados y agregados (datos que ya no pueden identificarte personalmente) para cualquier fin lícito, incluidos, entre otros:</p>
+<ul>
+<li>Mejora del producto, desarrollo de funciones e investigación</li>
+<li>Entrenamiento y mejora de modelos de aprendizaje automático y funciones de IA (p. ej., mejores recomendaciones de ejercicios, análisis de la técnica, mejora del movimiento)</li>
+<li>Generación de estadísticas agregadas y benchmarks (p. ej., rendimiento medio por ejercicio)</li>
+<li>Análisis empresarial e informes</li>
+</ul>
+<p>Estos datos anonimizados <strong>nunca incluyen</strong> tu nombre, correo electrónico, apodo, foto de perfil ni ninguna información que pueda identificarte. Una vez anonimizados, los datos dejan de ser datos personales según el RGPD y otras leyes de privacidad, y esta política no restringe su uso.</p>
+</div>
+<p><strong>No</strong> usamos tus datos de fitness identificables, tu historial de entrenamientos ni tus mediciones corporales con fines publicitarios. AdMob solo recibe identificadores estándar a nivel de dispositivo.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Contenido de usuarios y entrenamiento de IA</h2>
+<h3>5.1 Vídeos y medios</h3>
+<p>Cuando subes vídeos de récords personales u otros medios a SyzUp, nos concedes una licencia según lo descrito en nuestros <a href="terms.html" class="xdoc">Términos de Servicio</a>. Además de mostrar tu contenido en las funciones sociales de la app, podemos usar contenido de vídeo <strong>desidentificado</strong> (con toda la información de identificación personal, como rostros, nombres y metadatos, eliminada) para entrenar modelos de aprendizaje automático que mejoren funciones como el análisis de la técnica de ejercicios, el feedback sobre la técnica y el reconocimiento de movimientos.</p>
+<p><strong>Nunca</strong> usaremos tus vídeos, imágenes o medios identificables en materiales de marketing, ni los venderemos a terceros ni los pondremos a disposición fuera de SyzUp sin tu consentimiento explícito y por separado.</p>
+<h3>5.2 Datos de entrenamiento y rendimiento</h3>
+<p>Las estadísticas de entrenamiento anonimizadas (p. ej., frecuencia de ejercicios, patrones de volumen, curvas de progresión) pueden usarse para mejorar los planes de entrenamiento generados por IA, desarrollar nuevas funciones y crear benchmarks agregados. Estos datos se despojan de todos los identificadores personales antes de su uso.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Servicios de terceros</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Autenticación, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Datos almacenados en la <strong>UE (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Privacidad de Firebase →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">DPA de Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Anuncios en el nivel gratuito. Solo recibe identificadores del dispositivo. No se comparten datos de fitness ni de salud.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Privacidad de Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Gestión de suscripciones a través de Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">Privacidad de RevenueCat →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (a través de Cloud Functions)</div>
+<p>La generación de entrenamientos con IA se realiza en el servidor. Las preferencias de fitness se envían para generar los planes, pero OpenAI no las almacena. No se transfieren datos personales.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">Privacidad de OpenAI →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Almacenamiento de datos y seguridad</h2>
+<p>Almacenamiento principal de datos: Firebase (Google Cloud), <strong>Unión Europea</strong>.</p>
+<ul>
+<li>Reglas de seguridad de Firebase — acceso restringido a los propietarios de los datos</li>
+<li>Firebase App Check — previene el acceso no autorizado a la API</li>
+<li>Almacenamiento local cifrado con AES (Hive con claves del llavero de la plataforma)</li>
+<li>Limitación de solicitudes y registro de seguridad en el servidor</li>
+<li>HTTPS/TLS para toda la comunicación de red</li>
+<li>Sin almacenamiento de contraseñas en texto plano</li>
+</ul>
+<h3>Transferencias internacionales de datos</h3>
+<p>Algunos servicios (Crashlytics, AdMob) pueden tratar datos en Estados Unidos. Para los usuarios del EEE/Reino Unido, estas transferencias están protegidas por cláusulas contractuales tipo (SCC). Para todos los usuarios, garantizamos que los datos transferidos reciben una protección sustancialmente equivalente independientemente del destino.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Conservación de los datos</h2>
+<table>
+<tr><th>Tipo de datos</th><th>Período de conservación</th></tr>
+<tr><td>Datos de cuenta y fitness</td><td>Hasta la eliminación de la cuenta</td></tr>
+<tr><td>Mensajes de chat</td><td>Hasta su eliminación o la eliminación de la cuenta</td></tr>
+<tr><td>Informes de fallos</td><td>90 días</td></tr>
+<tr><td>Análisis</td><td>14 meses</td></tr>
+<tr><td>Registros de seguridad</td><td>30 días</td></tr>
+<tr><td>Tras la eliminación de la cuenta</td><td>Todos los datos personales se eliminan en un plazo de 30 días</td></tr>
+<tr><td>Datos anonimizados/agregados</td><td>Conservados indefinidamente (no son datos personales)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Compartición de datos</h2>
+<p><strong>No vendemos tus datos personales.</strong> No compartimos tus datos personales con terceros para sus propios fines de marketing.</p>
+<ul>
+<li><strong>Funciones sociales:</strong> apodo, avatar, rango y estadísticas visibles según tu configuración de privacidad (público/amigos/privado).</li>
+<li><strong>Publicidad:</strong> AdMob solo recibe identificadores del dispositivo. Ningún dato de fitness ni de salud.</li>
+<li><strong>Proveedores de servicios:</strong> los encargados del tratamiento indicados en la sección 6, únicamente para prestar los servicios, en virtud de acuerdos de tratamiento de datos.</li>
+<li><strong>Requisitos legales:</strong> cuando lo exijan la ley, la normativa, un procedimiento judicial o una solicitud gubernamental.</li>
+<li><strong>Datos anonimizados:</strong> los datos desidentificados y agregados pueden compartirse con fines de investigación, benchmarking o empresariales, pero estos datos no pueden identificarte.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> Tus derechos</h2>
+<h3>10.1 Todos los usuarios</h3>
+<p>Independientemente de dónde vivas, puedes:</p>
+<ul>
+<li>Acceder a tus datos personales y revisarlos en la app</li>
+<li>Corregir la información de tu perfil en cualquier momento</li>
+<li>Eliminar tu cuenta y todos los datos asociados (Ajustes → Cuenta → Eliminar cuenta)</li>
+<li>Desactivar las notificaciones push en los ajustes del dispositivo</li>
+<li>Desactivar la publicidad personalizada en los ajustes del dispositivo</li>
+<li>Controlar tu visibilidad social con la configuración del modo de privacidad</li>
+<li>Contactarnos por cualquier cuestión relacionada con tus datos</li>
+</ul>
+<h3>10.2 Espacio Económico Europeo, Reino Unido y Suiza (RGPD)</h3>
+<p>Además, tienes derecho a:</p>
+<ul>
+<li><strong>Acceso (art. 15):</strong> solicitar una copia completa de tus datos personales.</li>
+<li><strong>Rectificación (art. 16):</strong> corregir datos inexactos.</li>
+<li><strong>Supresión (art. 17):</strong> solicitar la eliminación completa.</li>
+<li><strong>Limitación (art. 18):</strong> restringir el tratamiento en determinados casos.</li>
+<li><strong>Portabilidad (art. 20):</strong> recibir los datos en un formato legible por máquina.</li>
+<li><strong>Oposición (art. 21):</strong> oponerte al tratamiento basado en el interés legítimo.</li>
+<li><strong>Retirada del consentimiento (art. 7.3):</strong> en cualquier momento, sin afectar a la licitud del tratamiento previo.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Autoridad de control</div>
+<p>Tienes derecho a presentar una reclamación ante una autoridad de control. En Polonia: Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. También puedes dirigirte a la autoridad de tu país de residencia.</p>
+</div>
+<h3>10.3 Residentes de California (CCPA/CPRA)</h3>
+<p>Si resides en California, tienes derechos adicionales en virtud de la California Consumer Privacy Act (CCPA) y la California Privacy Rights Act (CPRA):</p>
+<ul>
+<li><strong>Derecho a saber:</strong> qué datos personales recopilamos, usamos y divulgamos.</li>
+<li><strong>Derecho a la eliminación:</strong> solicitar la eliminación de tus datos personales.</li>
+<li><strong>Derecho a excluirte de la venta:</strong> no vendemos tus datos personales. No compartimos datos personales para publicidad conductual en contextos cruzados.</li>
+<li><strong>Derecho a la no discriminación:</strong> no te discriminaremos por ejercer tus derechos.</li>
+<li><strong>Derecho a la corrección:</strong> corregir datos personales inexactos.</li>
+<li><strong>Derecho a limitar el uso de datos personales sensibles:</strong> puedes limitar el uso de los datos de fitness relacionados con la salud a lo necesario para prestar el servicio.</li>
+</ul>
+<p>Para ejercer estos derechos, contáctanos en la dirección de correo de la sección 1. Verificaremos tu identidad y responderemos en un plazo de 45 días.</p>
+<p><strong>Categorías de datos personales recopilados</strong> (según CCPA §1798.110): identificadores (correo, apodo), información relacionada con la salud (datos de fitness, peso corporal), actividad en internet/electrónica (análisis de uso, datos de fallos), geolocalización (solo a nivel de país) e información audiovisual (fotos de perfil, vídeos de récords).</p>
+<h3>10.4 Otras jurisdicciones</h3>
+<p>Si vives en una jurisdicción con leyes de protección de datos (incluidas, entre otras, la LGPD de Brasil, la PIPEDA de Canadá, la Privacy Act de Australia, la APPI de Japón y la PIPA de Corea del Sur), atenderemos los derechos que te correspondan previa solicitud. Contáctanos en la dirección de correo de la sección 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Eliminación de la cuenta</h2>
+<ul>
+<li><strong>En la app:</strong> Ajustes → Cuenta → Eliminar cuenta</li>
+<li><strong>Por correo:</strong> asunto "Account Deletion Request"</li>
+</ul>
+<p>Todos los datos personales se eliminan de forma permanente en un plazo de 30 días, incluidos: perfil, entrenamientos, planes, chats, récords, vídeos y tokens FCM. Los datos agregados anonimizados que no pueden identificarte podrán conservarse.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Privacidad de los menores</h2>
+<p>SyzUp no está destinado a menores de 16 años (o de la edad de consentimiento digital aplicable en cada jurisdicción). No recopilamos datos de menores de forma consciente. Si descubrimos que un menor nos ha proporcionado datos personales, los eliminaremos de inmediato. Los padres pueden contactarnos para solicitar la eliminación.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Publicidad</h2>
+<ul>
+<li><strong>Android:</strong> Ajustes → Privacidad → Anuncios → "Desactivar personalización de anuncios"</li>
+<li>En el nivel gratuito se seguirán mostrando anuncios no personalizados.</li>
+<li>Los suscriptores premium no ven anuncios.</li>
+</ul>
+<p>No usamos datos de salud ni de fitness para segmentar anuncios. AdMob solo recibe identificadores estándar del dispositivo.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Señales "Do Not Track"</h2>
+<p>SyzUp es una aplicación móvil y no responde a las señales "Do Not Track" de los navegadores. No obstante, puedes controlar la recopilación de datos mediante los mecanismos de exclusión descritos en esta política (personalización de anuncios, notificaciones push, modo de privacidad).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Cambios en esta política</h2>
+<p>Te informaremos de los cambios sustanciales mediante notificación en la app con al menos 14 días de antelación a su entrada en vigor. El uso continuado tras la fecha de entrada en vigor constituye su aceptación. Si no estás de acuerdo, elimina tu cuenta antes de esa fecha.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Contacto</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Responsable del tratamiento)</p>
+<p>Correo electrónico: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Operado desde: Polonia, UE</p>
+</div>
+<p>Procuramos responder a todas las solicitudes en un plazo de 30 días (45 días para las solicitudes CCPA).</p>
+</section>
+
+</div>
+
+<div class="lang-doc" data-lang="fr">
+
+<section>
+<p class="conv-note">Cette traduction est fournie à titre informatif uniquement. En cas de divergence, la version anglaise prévaut (pour les consommateurs résidant en Pologne, la version polonaise).</p>
+<p>La présente Politique de confidentialité explique comment SyzUp ("nous", "notre", "l'application") collecte, utilise, stocke et protège vos données personnelles. SyzUp est exploité depuis l'Union européenne et sert des utilisateurs dans le monde entier. Cette politique s'applique quel que soit l'endroit d'où vous accédez à l'application.</p>
+<p>En utilisant SyzUp, vous confirmez avoir lu et compris la présente Politique de confidentialité. Si vous n'êtes pas d'accord, n'utilisez pas l'application.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Responsable du traitement</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>E-mail : <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Exploité depuis : Pologne, Union européenne</p>
+</div>
+<p>Au sens du RGPD, le responsable du traitement est l'exploitant individuel de SyzUp, joignable à l'adresse e-mail ci-dessus.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Quelles données nous collectons</h2>
+<h3>2.1 Données de compte</h3>
+<ul>
+<li>Adresse e-mail</li>
+<li>Nom d'affichage (pseudonyme)</li>
+<li>Avatar de profil (si téléversé)</li>
+<li>Identifiants d'authentification de Google Sign-In ou Apple Sign-In</li>
+</ul>
+<h3>2.2 Données de fitness et liées à la santé</h3>
+<div class="warning">
+<div class="warning-title">Avis sur les données sensibles</div>
+<p>Les données de fitness et les mesures corporelles peuvent être considérées comme des données de santé au regard de certaines lois (y compris l'art. 9 du RGPD). En saisissant volontairement ces données, vous donnez votre consentement explicite à leur traitement conformément à la présente politique. Vous pouvez retirer votre consentement à tout moment en supprimant vos données ou votre compte.</p>
+</div>
+<ul>
+<li>Séances d'entraînement (exercices, séries, répétitions, poids soulevé)</li>
+<li>Plans d'entraînement et préférences</li>
+<li>Records personnels (PR)</li>
+<li>Entrées de poids corporel</li>
+<li>Progression des exercices, données d'XP et de niveau</li>
+<li>Statistiques et historique d'entraînement</li>
+<li>Estimations de récupération musculaire</li>
+</ul>
+<h3>2.3 Données relatives à l'appareil et à l'utilisation</h3>
+<ul>
+<li>Type d'appareil et version du système d'exploitation</li>
+<li>Version et numéro de build de l'application</li>
+<li>Rapports de plantage et données de performance (Firebase Crashlytics)</li>
+<li>Événements d'analyse anonymisés (Firebase Analytics)</li>
+<li>Identifiant publicitaire (pour AdMob, offre gratuite uniquement)</li>
+</ul>
+<h3>2.4 Médias et contenu généré par les utilisateurs</h3>
+<ul>
+<li>Photos de profil (appareil photo ou photothèque)</li>
+<li>Vidéos de records personnels (facultatif)</li>
+<li>Publications et commentaires du fil social</li>
+<li>Messages de chat entre utilisateurs</li>
+</ul>
+<h3>2.5 Données sociales</h3>
+<ul>
+<li>Relations d'abonnement (abonnés/abonnements)</li>
+<li>Interactions avec les profils publics (mentions j'aime, commentaires)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Base juridique du traitement</h2>
+<p>Pour les utilisateurs de l'Espace économique européen (EEE), du Royaume-Uni et de la Suisse, nous traitons les données conformément au RGPD :</p>
+<table>
+<tr><th>Base juridique</th><th>Données et finalité</th></tr>
+<tr><td><strong>Contrat</strong> (art. 6, §1, b)</td><td>Données de compte et de fitness — nécessaires à la fourniture du service de suivi d'entraînement.</td></tr>
+<tr><td><strong>Consentement explicite</strong> (art. 9, §2, a)</td><td>Données liées à la santé (poids corporel, métriques d'entraînement) — saisies volontairement. Révocable à tout moment.</td></tr>
+<tr><td><strong>Intérêt légitime</strong> (art. 6, §1, f)</td><td>Rapports de plantage, analyses, données anonymisées pour l'amélioration du produit et la recherche — pour maintenir, sécuriser et améliorer l'application.</td></tr>
+<tr><td><strong>Consentement</strong> (art. 6, §1, a)</td><td>Identifiant publicitaire pour AdMob, notifications push — désactivation possible dans les paramètres de l'appareil.</td></tr>
+</table>
+<p>Pour les utilisateurs hors EEE, nous traitons les données comme décrit dans la présente politique et conformément aux lois locales applicables.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Comment nous utilisons vos informations</h2>
+<table>
+<tr><th>Finalité</th><th>Données utilisées</th></tr>
+<tr><td>Expérience de suivi d'entraînement</td><td>Données de fitness, informations de compte</td></tr>
+<tr><td>Fonctionnalités sociales (classements, fil, chat)</td><td>Pseudonyme, avatar, statistiques d'entraînement</td></tr>
+<tr><td>Gamification (XP, niveaux, rangs)</td><td>Données d'entraînement, progression des exercices</td></tr>
+<tr><td>Génération de plans d'entraînement par IA</td><td>Préférences de fitness (côté serveur, non stockées par le fournisseur d'IA)</td></tr>
+<tr><td>Notifications push</td><td>Jeton FCM, préférences</td></tr>
+<tr><td>Correction de bugs et amélioration</td><td>Rapports de plantage, analyses anonymisées</td></tr>
+<tr><td>Publicités (offre gratuite)</td><td>Identifiant publicitaire via AdMob</td></tr>
+</table>
+<h3>4.1 Données anonymisées et agrégées</h3>
+<div class="card">
+<div class="card-title">Important</div>
+<p>Nous pouvons utiliser des données anonymisées, désidentifiées et agrégées (des données qui ne permettent plus de vous identifier personnellement) à toute fin licite, y compris, sans s'y limiter :</p>
+<ul>
+<li>Amélioration du produit, développement de fonctionnalités et recherche</li>
+<li>Entraînement et amélioration de modèles d'apprentissage automatique et de fonctionnalités d'IA (p. ex. meilleures recommandations d'exercices, analyse de la technique, amélioration du mouvement)</li>
+<li>Production de statistiques agrégées et de benchmarks (p. ex. performance moyenne par exercice)</li>
+<li>Analyses commerciales et rapports</li>
+</ul>
+<p>Ces données anonymisées ne comprennent <strong>jamais</strong> votre nom, votre e-mail, votre pseudonyme, votre photo de profil ni aucune information susceptible de vous identifier. Une fois anonymisées, les données ne sont plus considérées comme des données personnelles au sens du RGPD et des autres lois sur la protection de la vie privée, et la présente politique ne restreint pas leur utilisation.</p>
+</div>
+<p>Nous n'utilisons <strong>pas</strong> vos données de fitness identifiables, votre historique d'entraînement ni vos mesures corporelles à des fins publicitaires. AdMob ne reçoit que des identifiants standard au niveau de l'appareil.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Contenu des utilisateurs et entraînement de l'IA</h2>
+<h3>5.1 Vidéos et médias</h3>
+<p>Lorsque vous téléversez des vidéos de records personnels ou d'autres médias sur SyzUp, vous nous accordez une licence telle que décrite dans nos <a href="terms.html" class="xdoc">Conditions d'utilisation</a>. En plus d'afficher votre contenu dans les fonctionnalités sociales de l'application, nous pouvons utiliser du contenu vidéo <strong>désidentifié</strong> (dont toutes les informations d'identification personnelle telles que les visages, les noms et les métadonnées ont été supprimées) pour entraîner des modèles d'apprentissage automatique afin d'améliorer des fonctionnalités telles que l'analyse de la technique d'exercice, le feedback sur la technique et la reconnaissance des mouvements.</p>
+<p>Nous n'utiliserons <strong>jamais</strong> vos vidéos, images ou médias identifiables dans des supports marketing, ne les vendrons jamais à des tiers et ne les rendrons jamais disponibles en dehors de SyzUp sans votre consentement explicite et distinct.</p>
+<h3>5.2 Données d'entraînement et de performance</h3>
+<p>Les statistiques d'entraînement anonymisées (p. ex. fréquence des exercices, schémas de volume, courbes de progression) peuvent être utilisées pour améliorer les plans d'entraînement générés par l'IA, développer de nouvelles fonctionnalités et créer des benchmarks agrégés. Ces données sont débarrassées de tous les identifiants personnels avant utilisation.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Services tiers</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Authentification, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Données stockées dans l'<strong>UE (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Confidentialité Firebase →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">DPA Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Publicités dans l'offre gratuite. Ne reçoit que des identifiants d'appareil. Aucune donnée de fitness ou de santé n'est partagée.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Confidentialité Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Gestion des abonnements via Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">Confidentialité RevenueCat →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (via Cloud Functions)</div>
+<p>La génération d'entraînements par IA s'effectue côté serveur. Les préférences de fitness sont transmises pour générer les plans, mais ne sont pas stockées par OpenAI. Aucune donnée personnelle n'est transférée.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">Confidentialité OpenAI →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Stockage des données et sécurité</h2>
+<p>Stockage principal des données : Firebase (Google Cloud), <strong>Union européenne</strong>.</p>
+<ul>
+<li>Règles de sécurité Firebase — accès limité aux propriétaires des données</li>
+<li>Firebase App Check — empêche les accès API non autorisés</li>
+<li>Stockage local chiffré AES (Hive avec des clés du trousseau de la plateforme)</li>
+<li>Limitation du débit et journalisation de sécurité côté serveur</li>
+<li>HTTPS/TLS pour toutes les communications réseau</li>
+<li>Aucun stockage de mots de passe en clair</li>
+</ul>
+<h3>Transferts internationaux de données</h3>
+<p>Certains services (Crashlytics, AdMob) peuvent traiter des données aux États-Unis. Pour les utilisateurs de l'EEE/du Royaume-Uni, ces transferts sont protégés par des clauses contractuelles types (CCT). Pour tous les utilisateurs, nous veillons à ce que les données transférées bénéficient d'une protection substantiellement équivalente quelle que soit la destination.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Durée de conservation des données</h2>
+<table>
+<tr><th>Type de données</th><th>Durée de conservation</th></tr>
+<tr><td>Données de compte et de fitness</td><td>Jusqu'à la suppression du compte</td></tr>
+<tr><td>Messages de chat</td><td>Jusqu'à leur suppression ou la suppression du compte</td></tr>
+<tr><td>Rapports de plantage</td><td>90 jours</td></tr>
+<tr><td>Analyses</td><td>14 mois</td></tr>
+<tr><td>Journaux de sécurité</td><td>30 jours</td></tr>
+<tr><td>Après la suppression du compte</td><td>Toutes les données personnelles sont supprimées sous 30 jours</td></tr>
+<tr><td>Données anonymisées/agrégées</td><td>Conservées indéfiniment (ce ne sont pas des données personnelles)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Partage des données</h2>
+<p><strong>Nous ne vendons pas vos données personnelles.</strong> Nous ne partageons pas vos données personnelles avec des tiers à leurs propres fins marketing.</p>
+<ul>
+<li><strong>Fonctionnalités sociales :</strong> pseudonyme, avatar, rang et statistiques visibles selon votre paramètre de confidentialité (public/amis/privé).</li>
+<li><strong>Publicité :</strong> AdMob ne reçoit que des identifiants d'appareil. Aucune donnée de fitness ou de santé.</li>
+<li><strong>Prestataires de services :</strong> les sous-traitants énumérés à la section 6, uniquement pour fournir les services, dans le cadre d'accords de traitement des données.</li>
+<li><strong>Obligations légales :</strong> lorsque la loi, la réglementation, une procédure judiciaire ou une demande gouvernementale l'exige.</li>
+<li><strong>Données anonymisées :</strong> les données désidentifiées et agrégées peuvent être partagées à des fins de recherche, de benchmarking ou commerciales, mais ces données ne permettent pas de vous identifier.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> Vos droits</h2>
+<h3>10.1 Tous les utilisateurs</h3>
+<p>Où que vous viviez, vous pouvez :</p>
+<ul>
+<li>Accéder à vos données personnelles et les consulter dans l'application</li>
+<li>Corriger les informations de votre profil à tout moment</li>
+<li>Supprimer votre compte et toutes les données associées (Paramètres → Compte → Supprimer le compte)</li>
+<li>Désactiver les notifications push dans les paramètres de l'appareil</li>
+<li>Désactiver les publicités personnalisées dans les paramètres de l'appareil</li>
+<li>Contrôler votre visibilité sociale via les paramètres du mode confidentialité</li>
+<li>Nous contacter pour toute question relative à vos données</li>
+</ul>
+<h3>10.2 Espace économique européen, Royaume-Uni et Suisse (RGPD)</h3>
+<p>Vous disposez en outre des droits suivants :</p>
+<ul>
+<li><strong>Accès (art. 15) :</strong> demander une copie complète de vos données personnelles.</li>
+<li><strong>Rectification (art. 16) :</strong> corriger des données inexactes.</li>
+<li><strong>Effacement (art. 17) :</strong> demander la suppression complète.</li>
+<li><strong>Limitation (art. 18) :</strong> restreindre le traitement dans certains cas.</li>
+<li><strong>Portabilité (art. 20) :</strong> recevoir les données dans un format lisible par machine.</li>
+<li><strong>Opposition (art. 21) :</strong> vous opposer au traitement fondé sur l'intérêt légitime.</li>
+<li><strong>Retrait du consentement (art. 7, §3) :</strong> à tout moment, sans affecter la licéité du traitement antérieur.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Autorité de contrôle</div>
+<p>Vous avez le droit de déposer une plainte auprès d'une autorité de contrôle. En Pologne : Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. Vous pouvez également vous adresser à l'autorité de votre pays de résidence.</p>
+</div>
+<h3>10.3 Résidents de Californie (CCPA/CPRA)</h3>
+<p>Si vous résidez en Californie, vous disposez de droits supplémentaires en vertu du California Consumer Privacy Act (CCPA) et du California Privacy Rights Act (CPRA) :</p>
+<ul>
+<li><strong>Droit de savoir :</strong> quelles données personnelles nous collectons, utilisons et divulguons.</li>
+<li><strong>Droit à la suppression :</strong> demander la suppression de vos données personnelles.</li>
+<li><strong>Droit de refuser la vente :</strong> nous ne vendons pas vos données personnelles. Nous ne partageons pas de données personnelles à des fins de publicité comportementale intercontextuelle.</li>
+<li><strong>Droit à la non-discrimination :</strong> nous ne vous pénaliserons pas pour l'exercice de vos droits.</li>
+<li><strong>Droit à la rectification :</strong> corriger des données personnelles inexactes.</li>
+<li><strong>Droit de limiter l'utilisation des données personnelles sensibles :</strong> vous pouvez limiter l'utilisation des données de fitness liées à la santé à ce qui est nécessaire à la fourniture du service.</li>
+</ul>
+<p>Pour exercer ces droits, contactez-nous à l'adresse e-mail indiquée à la section 1. Nous vérifierons votre identité et répondrons sous 45 jours.</p>
+<p><strong>Catégories de données personnelles collectées</strong> (selon CCPA §1798.110) : identifiants (e-mail, pseudonyme), informations liées à la santé (données de fitness, poids corporel), activité internet/électronique (analyses d'utilisation, données de plantage), géolocalisation (au niveau du pays uniquement) et informations audiovisuelles (photos de profil, vidéos de records).</p>
+<h3>10.4 Autres juridictions</h3>
+<p>Si vous vivez dans une juridiction dotée de lois sur la protection des données (y compris, sans s'y limiter, la LGPD brésilienne, la PIPEDA canadienne, le Privacy Act australien, l'APPI japonaise, la PIPA sud-coréenne), nous donnerons suite aux droits qui vous sont applicables sur demande. Contactez-nous à l'adresse e-mail indiquée à la section 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Suppression du compte</h2>
+<ul>
+<li><strong>Dans l'application :</strong> Paramètres → Compte → Supprimer le compte</li>
+<li><strong>Par e-mail :</strong> objet "Account Deletion Request"</li>
+</ul>
+<p>Toutes les données personnelles sont définitivement supprimées sous 30 jours, y compris : profil, entraînements, plans, chats, records, vidéos et jetons FCM. Les données agrégées anonymisées qui ne permettent pas de vous identifier peuvent être conservées.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Vie privée des enfants</h2>
+<p>SyzUp n'est pas destiné aux enfants de moins de 16 ans (ou de l'âge du consentement numérique applicable dans la juridiction concernée). Nous ne collectons pas sciemment de données auprès d'enfants. Si nous apprenons qu'un enfant nous a fourni des données personnelles, nous les supprimerons rapidement. Les parents peuvent nous contacter pour demander la suppression.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Publicité</h2>
+<ul>
+<li><strong>Android :</strong> Paramètres → Confidentialité → Annonces → "Désactiver la personnalisation des annonces"</li>
+<li>Dans l'offre gratuite, des publicités non personnalisées continueront de s'afficher.</li>
+<li>Les abonnés premium ne voient aucune publicité.</li>
+</ul>
+<p>Nous n'utilisons pas de données de santé ou de fitness pour le ciblage publicitaire. AdMob ne reçoit que des identifiants standard de l'appareil.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Signaux "Do Not Track"</h2>
+<p>SyzUp est une application mobile et ne répond pas aux signaux "Do Not Track" des navigateurs. Vous pouvez toutefois contrôler la collecte de données grâce aux mécanismes de désactivation décrits dans la présente politique (personnalisation des publicités, notifications push, mode confidentialité).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Modifications de la présente politique</h2>
+<p>Nous vous informerons des modifications substantielles par notification dans l'application au moins 14 jours avant leur entrée en vigueur. La poursuite de l'utilisation après la date d'entrée en vigueur vaut acceptation. Si vous n'êtes pas d'accord, supprimez votre compte avant cette date.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Contact</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Responsable du traitement)</p>
+<p>E-mail : <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Exploité depuis : Pologne, UE</p>
+</div>
+<p>Nous nous efforçons de répondre à toutes les demandes sous 30 jours (45 jours pour les demandes CCPA).</p>
+</section>
+
+</div>
+
+<div class="lang-doc" data-lang="it">
+
+<section>
+<p class="conv-note">Questa traduzione è fornita a solo scopo informativo. In caso di discrepanze, prevale la versione inglese (per i consumatori residenti in Polonia, la versione polacca).</p>
+<p>La presente Informativa sulla privacy spiega come SyzUp ("noi", "nostro", "l'app") raccoglie, utilizza, conserva e protegge i tuoi dati personali. SyzUp è gestito dall'Unione europea e serve utenti in tutto il mondo. Questa informativa si applica indipendentemente da dove accedi all'app.</p>
+<p>Utilizzando SyzUp, confermi di aver letto e compreso la presente Informativa sulla privacy. Se non sei d'accordo, non utilizzare l'app.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Titolare del trattamento</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>E-mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Gestito dalla: Polonia, Unione europea</p>
+</div>
+<p>Ai fini del GDPR, il titolare del trattamento è il gestore individuale di SyzUp, contattabile all'indirizzo e-mail sopra indicato.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Quali dati raccogliamo</h2>
+<h3>2.1 Dati dell'account</h3>
+<ul>
+<li>Indirizzo e-mail</li>
+<li>Nome visualizzato (nickname)</li>
+<li>Avatar del profilo (se caricato)</li>
+<li>Credenziali di autenticazione da Google Sign-In o Apple Sign-In</li>
+</ul>
+<h3>2.2 Dati di fitness e relativi alla salute</h3>
+<div class="warning">
+<div class="warning-title">Avviso sui dati sensibili</div>
+<p>I dati di fitness e le misurazioni corporee possono essere considerati dati relativi alla salute ai sensi di alcune leggi (incluso l'art. 9 del GDPR). Inserendo volontariamente questi dati, presti il tuo consenso esplicito al loro trattamento conformemente a questa informativa. Puoi revocare il consenso in qualsiasi momento eliminando i tuoi dati o il tuo account.</p>
+</div>
+<ul>
+<li>Sessioni di allenamento (esercizi, serie, ripetizioni, peso sollevato)</li>
+<li>Piani di allenamento e preferenze</li>
+<li>Record personali (PR)</li>
+<li>Registrazioni del peso corporeo</li>
+<li>Progressi negli esercizi, dati di XP e livello</li>
+<li>Statistiche e cronologia degli allenamenti</li>
+<li>Stime di recupero muscolare</li>
+</ul>
+<h3>2.3 Dati del dispositivo e di utilizzo</h3>
+<ul>
+<li>Tipo di dispositivo e versione del sistema operativo</li>
+<li>Versione e numero di build dell'app</li>
+<li>Report degli arresti anomali e dati sulle prestazioni (Firebase Crashlytics)</li>
+<li>Eventi di analisi anonimizzati (Firebase Analytics)</li>
+<li>Identificatore pubblicitario (per AdMob, solo livello gratuito)</li>
+</ul>
+<h3>2.4 Media e contenuti generati dagli utenti</h3>
+<ul>
+<li>Foto del profilo (fotocamera o libreria)</li>
+<li>Video dei record personali (facoltativo)</li>
+<li>Post e commenti nel feed social</li>
+<li>Messaggi di chat tra utenti</li>
+</ul>
+<h3>2.5 Dati social</h3>
+<ul>
+<li>Relazioni di follow (follower/seguiti)</li>
+<li>Interazioni con profili pubblici (mi piace, commenti)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Base giuridica del trattamento</h2>
+<p>Per gli utenti dello Spazio economico europeo (SEE), del Regno Unito e della Svizzera, trattiamo i dati ai sensi del GDPR:</p>
+<table>
+<tr><th>Base giuridica</th><th>Dati e finalità</th></tr>
+<tr><td><strong>Contratto</strong> (art. 6, par. 1, lett. b)</td><td>Dati dell'account e di fitness — necessari per fornire il servizio di monitoraggio degli allenamenti.</td></tr>
+<tr><td><strong>Consenso esplicito</strong> (art. 9, par. 2, lett. a)</td><td>Dati relativi alla salute (peso corporeo, metriche di allenamento) — inseriti volontariamente. Revocabile in qualsiasi momento.</td></tr>
+<tr><td><strong>Legittimo interesse</strong> (art. 6, par. 1, lett. f)</td><td>Report degli arresti anomali, analisi, dati anonimizzati per il miglioramento del prodotto e la ricerca — per mantenere, proteggere e migliorare l'app.</td></tr>
+<tr><td><strong>Consenso</strong> (art. 6, par. 1, lett. a)</td><td>ID pubblicitario per AdMob, notifiche push — disattivabile nelle impostazioni del dispositivo.</td></tr>
+</table>
+<p>Per gli utenti al di fuori del SEE, trattiamo i dati come descritto in questa informativa e in conformità con le leggi locali applicabili.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Come utilizziamo le tue informazioni</h2>
+<table>
+<tr><th>Finalità</th><th>Dati utilizzati</th></tr>
+<tr><td>Esperienza di monitoraggio degli allenamenti</td><td>Dati di fitness, informazioni dell'account</td></tr>
+<tr><td>Funzioni social (classifiche, feed, chat)</td><td>Nickname, avatar, statistiche di allenamento</td></tr>
+<tr><td>Gamification (XP, livelli, ranghi)</td><td>Dati di allenamento, progressi negli esercizi</td></tr>
+<tr><td>Generazione di piani di allenamento con IA</td><td>Preferenze di fitness (lato server, non conservate dal fornitore di IA)</td></tr>
+<tr><td>Notifiche push</td><td>Token FCM, preferenze</td></tr>
+<tr><td>Correzione di bug e miglioramenti</td><td>Report degli arresti anomali, analisi anonimizzate</td></tr>
+<tr><td>Pubblicità (livello gratuito)</td><td>ID pubblicitario tramite AdMob</td></tr>
+</table>
+<h3>4.1 Dati anonimizzati e aggregati</h3>
+<div class="card">
+<div class="card-title">Importante</div>
+<p>Possiamo utilizzare dati anonimizzati, deidentificati e aggregati (dati che non possono più identificarti personalmente) per qualsiasi scopo lecito, inclusi, a titolo esemplificativo:</p>
+<ul>
+<li>Miglioramento del prodotto, sviluppo di funzionalità e ricerca</li>
+<li>Addestramento e miglioramento di modelli di machine learning e funzionalità di IA (ad es. migliori raccomandazioni di esercizi, analisi della tecnica, miglioramento del movimento)</li>
+<li>Generazione di statistiche aggregate e benchmark (ad es. prestazioni medie per esercizio)</li>
+<li>Analisi aziendali e reportistica</li>
+</ul>
+<p>Questi dati anonimizzati <strong>non includono mai</strong> il tuo nome, la tua e-mail, il tuo nickname, la tua foto del profilo né alcuna informazione che possa identificarti. Una volta anonimizzati, i dati non sono più considerati dati personali ai sensi del GDPR e di altre leggi sulla privacy, e questa informativa non ne limita l'uso.</p>
+</div>
+<p><strong>Non</strong> utilizziamo i tuoi dati di fitness identificabili, la cronologia degli allenamenti o le misurazioni corporee per scopi pubblicitari. AdMob riceve solo identificatori standard a livello di dispositivo.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Contenuti degli utenti e addestramento dell'IA</h2>
+<h3>5.1 Video e media</h3>
+<p>Quando carichi video di record personali o altri media su SyzUp, ci concedi una licenza come descritto nei nostri <a href="terms.html" class="xdoc">Termini di servizio</a>. Oltre a visualizzare i tuoi contenuti nelle funzioni social dell'app, possiamo utilizzare contenuti video <strong>deidentificati</strong> (con tutte le informazioni di identificazione personale come volti, nomi e metadati rimosse) per addestrare modelli di machine learning al fine di migliorare funzionalità come l'analisi della tecnica degli esercizi, il feedback sulla tecnica e il riconoscimento dei movimenti.</p>
+<p><strong>Mai</strong> utilizzeremo i tuoi video, immagini o media identificabili in materiali di marketing, né li venderemo a terzi né li renderemo disponibili al di fuori di SyzUp senza il tuo consenso esplicito e separato.</p>
+<h3>5.2 Dati di allenamento e prestazioni</h3>
+<p>Le statistiche di allenamento anonimizzate (ad es. frequenza degli esercizi, schemi di volume, curve di progressione) possono essere utilizzate per migliorare i piani di allenamento generati dall'IA, sviluppare nuove funzionalità e creare benchmark aggregati. Questi dati vengono privati di tutti gli identificatori personali prima dell'uso.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Servizi di terze parti</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Autenticazione, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Dati conservati nell'<strong>UE (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Firebase →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">DPA Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Pubblicità nel livello gratuito. Riceve solo identificatori del dispositivo. Nessun dato di fitness o salute viene condiviso.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Privacy Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Gestione degli abbonamenti tramite Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">Privacy RevenueCat →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (tramite Cloud Functions)</div>
+<p>La generazione di allenamenti con IA avviene lato server. Le preferenze di fitness vengono inviate per generare i piani, ma non vengono conservate da OpenAI. Nessun dato personale viene trasferito.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">Privacy OpenAI →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Conservazione dei dati e sicurezza</h2>
+<p>Archiviazione principale dei dati: Firebase (Google Cloud), <strong>Unione europea</strong>.</p>
+<ul>
+<li>Regole di sicurezza Firebase — accesso limitato ai proprietari dei dati</li>
+<li>Firebase App Check — previene accessi API non autorizzati</li>
+<li>Archiviazione locale crittografata AES (Hive con chiavi del portachiavi della piattaforma)</li>
+<li>Limitazione delle richieste e registrazione di sicurezza lato server</li>
+<li>HTTPS/TLS per tutte le comunicazioni di rete</li>
+<li>Nessuna conservazione di password in chiaro</li>
+</ul>
+<h3>Trasferimenti internazionali di dati</h3>
+<p>Alcuni servizi (Crashlytics, AdMob) possono trattare dati negli Stati Uniti. Per gli utenti del SEE/Regno Unito, questi trasferimenti sono protetti da clausole contrattuali standard (SCC). Per tutti gli utenti, garantiamo che i dati trasferiti ricevano una protezione sostanzialmente equivalente indipendentemente dalla destinazione.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Periodo di conservazione dei dati</h2>
+<table>
+<tr><th>Tipo di dati</th><th>Periodo di conservazione</th></tr>
+<tr><td>Dati dell'account e di fitness</td><td>Fino all'eliminazione dell'account</td></tr>
+<tr><td>Messaggi di chat</td><td>Fino all'eliminazione o alla cancellazione dell'account</td></tr>
+<tr><td>Report degli arresti anomali</td><td>90 giorni</td></tr>
+<tr><td>Analisi</td><td>14 mesi</td></tr>
+<tr><td>Log di sicurezza</td><td>30 giorni</td></tr>
+<tr><td>Dopo l'eliminazione dell'account</td><td>Tutti i dati personali vengono rimossi entro 30 giorni</td></tr>
+<tr><td>Dati anonimizzati/aggregati</td><td>Conservati a tempo indeterminato (non sono dati personali)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Condivisione dei dati</h2>
+<p><strong>Non vendiamo i tuoi dati personali.</strong> Non condividiamo i tuoi dati personali con terzi per le loro finalità di marketing.</p>
+<ul>
+<li><strong>Funzioni social:</strong> nickname, avatar, rango e statistiche visibili in base alla tua impostazione di privacy (pubblico/amici/privato).</li>
+<li><strong>Pubblicità:</strong> AdMob riceve solo identificatori del dispositivo. Nessun dato di fitness o salute.</li>
+<li><strong>Fornitori di servizi:</strong> i responsabili del trattamento elencati nella sezione 6, esclusivamente per fornire i servizi, in base ad accordi sul trattamento dei dati.</li>
+<li><strong>Obblighi legali:</strong> quando richiesto da legge, regolamenti, procedimenti legali o richieste governative.</li>
+<li><strong>Dati anonimizzati:</strong> i dati deidentificati e aggregati possono essere condivisi per finalità di ricerca, benchmarking o aziendali, ma questi dati non possono identificarti.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> I tuoi diritti</h2>
+<h3>10.1 Tutti gli utenti</h3>
+<p>Ovunque tu viva, puoi:</p>
+<ul>
+<li>Accedere ai tuoi dati personali e consultarli nell'app</li>
+<li>Correggere le informazioni del tuo profilo in qualsiasi momento</li>
+<li>Eliminare il tuo account e tutti i dati associati (Impostazioni → Account → Elimina account)</li>
+<li>Disattivare le notifiche push nelle impostazioni del dispositivo</li>
+<li>Disattivare la pubblicità personalizzata nelle impostazioni del dispositivo</li>
+<li>Controllare la tua visibilità social tramite le impostazioni della modalità privacy</li>
+<li>Contattarci per qualsiasi questione relativa ai dati</li>
+</ul>
+<h3>10.2 Spazio economico europeo, Regno Unito e Svizzera (GDPR)</h3>
+<p>Hai inoltre diritto a:</p>
+<ul>
+<li><strong>Accesso (art. 15):</strong> richiedere una copia completa dei tuoi dati personali.</li>
+<li><strong>Rettifica (art. 16):</strong> correggere dati inesatti.</li>
+<li><strong>Cancellazione (art. 17):</strong> richiedere l'eliminazione completa.</li>
+<li><strong>Limitazione (art. 18):</strong> limitare il trattamento in determinati casi.</li>
+<li><strong>Portabilità (art. 20):</strong> ricevere i dati in un formato leggibile da macchina.</li>
+<li><strong>Opposizione (art. 21):</strong> opporti al trattamento basato sul legittimo interesse.</li>
+<li><strong>Revoca del consenso (art. 7, par. 3):</strong> in qualsiasi momento, senza pregiudicare la liceità del trattamento precedente.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Autorità di controllo</div>
+<p>Hai il diritto di presentare un reclamo a un'autorità di controllo. In Polonia: Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. Puoi anche rivolgerti all'autorità del tuo paese di residenza.</p>
+</div>
+<h3>10.3 Residenti in California (CCPA/CPRA)</h3>
+<p>Se risiedi in California, hai diritti aggiuntivi ai sensi del California Consumer Privacy Act (CCPA) e del California Privacy Rights Act (CPRA):</p>
+<ul>
+<li><strong>Diritto di sapere:</strong> quali dati personali raccogliamo, utilizziamo e divulghiamo.</li>
+<li><strong>Diritto alla cancellazione:</strong> richiedere l'eliminazione dei tuoi dati personali.</li>
+<li><strong>Diritto di rifiutare la vendita:</strong> non vendiamo i tuoi dati personali. Non condividiamo dati personali per pubblicità comportamentale cross-context.</li>
+<li><strong>Diritto alla non discriminazione:</strong> non ti discrimineremo per l'esercizio dei tuoi diritti.</li>
+<li><strong>Diritto alla correzione:</strong> correggere dati personali inesatti.</li>
+<li><strong>Diritto di limitare l'uso dei dati personali sensibili:</strong> puoi limitare l'uso dei dati di fitness relativi alla salute a quanto necessario per fornire il servizio.</li>
+</ul>
+<p>Per esercitare questi diritti, contattaci all'indirizzo e-mail indicato nella sezione 1. Verificheremo la tua identità e risponderemo entro 45 giorni.</p>
+<p><strong>Categorie di dati personali raccolti</strong> (ai sensi del CCPA §1798.110): identificatori (e-mail, nickname), informazioni relative alla salute (dati di fitness, peso corporeo), attività internet/elettronica (analisi di utilizzo, dati sugli arresti anomali), geolocalizzazione (solo a livello di paese) e informazioni audiovisive (foto del profilo, video dei record).</p>
+<h3>10.4 Altre giurisdizioni</h3>
+<p>Se vivi in una giurisdizione con leggi sulla protezione dei dati (incluse, a titolo esemplificativo, la LGPD brasiliana, la PIPEDA canadese, il Privacy Act australiano, l'APPI giapponese, la PIPA sudcoreana), daremo seguito ai diritti a te applicabili su richiesta. Contattaci all'indirizzo e-mail indicato nella sezione 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Eliminazione dell'account</h2>
+<ul>
+<li><strong>Nell'app:</strong> Impostazioni → Account → Elimina account</li>
+<li><strong>Via e-mail:</strong> oggetto "Account Deletion Request"</li>
+</ul>
+<p>Tutti i dati personali vengono eliminati definitivamente entro 30 giorni, inclusi: profilo, allenamenti, piani, chat, record, video e token FCM. I dati aggregati anonimizzati che non possono identificarti potranno essere conservati.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Privacy dei minori</h2>
+<p>SyzUp non è destinato a minori di 16 anni (o dell'età del consenso digitale applicabile nella giurisdizione pertinente). Non raccogliamo consapevolmente dati da minori. Se veniamo a conoscenza del fatto che un minore ci ha fornito dati personali, li elimineremo tempestivamente. I genitori possono contattarci per richiederne l'eliminazione.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Pubblicità</h2>
+<ul>
+<li><strong>Android:</strong> Impostazioni → Privacy → Annunci → "Disattiva personalizzazione degli annunci"</li>
+<li>Nel livello gratuito continueranno a essere mostrati annunci non personalizzati.</li>
+<li>Gli abbonati premium non vedono annunci.</li>
+</ul>
+<p>Non utilizziamo dati di salute o fitness per il targeting pubblicitario. AdMob riceve solo identificatori standard del dispositivo.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Segnali "Do Not Track"</h2>
+<p>SyzUp è un'applicazione mobile e non risponde ai segnali "Do Not Track" dei browser. Puoi comunque controllare la raccolta dei dati tramite i meccanismi di disattivazione descritti in questa informativa (personalizzazione degli annunci, notifiche push, modalità privacy).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Modifiche a questa informativa</h2>
+<p>Ti informeremo delle modifiche sostanziali tramite notifica in-app almeno 14 giorni prima della loro entrata in vigore. L'uso continuato dopo la data di entrata in vigore ne costituisce accettazione. Se non sei d'accordo, elimina il tuo account prima di tale data.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Contatti</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Titolare del trattamento)</p>
+<p>E-mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Gestito dalla: Polonia, UE</p>
+</div>
+<p>Ci impegniamo a rispondere a tutte le richieste entro 30 giorni (45 giorni per le richieste CCPA).</p>
+</section>
+
+</div>
+
+<div class="lang-doc" data-lang="pt">
+
+<section>
+<p class="conv-note">Esta tradução é fornecida apenas para fins informativos. Em caso de divergência, prevalece a versão em inglês (para consumidores residentes na Polônia, a versão em polonês).</p>
+<p>Esta Política de Privacidade explica como o SyzUp ("nós", "nosso", "o app") coleta, usa, armazena e protege seus dados pessoais. O SyzUp é operado a partir da União Europeia e atende usuários em todo o mundo. Esta política se aplica independentemente de onde você acessa o app.</p>
+<p>Ao usar o SyzUp, você confirma que leu e compreendeu esta Política de Privacidade. Se você não concordar, não use o app.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Controlador dos dados</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>E-mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Operado a partir de: Polônia, União Europeia</p>
+</div>
+<p>Para os fins do GDPR, o controlador dos dados é o operador individual do SyzUp, que pode ser contatado no endereço de e-mail acima.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Quais dados coletamos</h2>
+<h3>2.1 Dados da conta</h3>
+<ul>
+<li>Endereço de e-mail</li>
+<li>Nome de exibição (apelido)</li>
+<li>Avatar do perfil (se enviado)</li>
+<li>Credenciais de autenticação do Google Sign-In ou Apple Sign-In</li>
+</ul>
+<h3>2.2 Dados de fitness e relacionados à saúde</h3>
+<div class="warning">
+<div class="warning-title">Aviso sobre dados sensíveis</div>
+<p>Dados de fitness e medições corporais podem ser considerados dados relativos à saúde segundo determinadas leis (incluindo o art. 9 do GDPR). Ao inserir voluntariamente esses dados, você dá seu consentimento explícito para o tratamento deles conforme esta política. Você pode retirar o consentimento a qualquer momento excluindo seus dados ou sua conta.</p>
+</div>
+<ul>
+<li>Sessões de treino (exercícios, séries, repetições, peso levantado)</li>
+<li>Planos de treino e preferências</li>
+<li>Recordes pessoais (PRs)</li>
+<li>Registros de peso corporal</li>
+<li>Progresso nos exercícios, dados de XP e nível</li>
+<li>Estatísticas e histórico de treinos</li>
+<li>Estimativas de recuperação muscular</li>
+</ul>
+<h3>2.3 Dados do dispositivo e de uso</h3>
+<ul>
+<li>Tipo de dispositivo e versão do sistema operacional</li>
+<li>Versão e número de build do app</li>
+<li>Relatórios de falhas e dados de desempenho (Firebase Crashlytics)</li>
+<li>Eventos de análise anonimizados (Firebase Analytics)</li>
+<li>Identificador de publicidade (para AdMob, apenas nível gratuito)</li>
+</ul>
+<h3>2.4 Mídias e conteúdo gerado por usuários</h3>
+<ul>
+<li>Fotos de perfil (câmera ou galeria)</li>
+<li>Vídeos de recordes pessoais (opcional)</li>
+<li>Posts e comentários no feed social</li>
+<li>Mensagens de chat entre usuários</li>
+</ul>
+<h3>2.5 Dados sociais</h3>
+<ul>
+<li>Relações de seguir (seguidores/seguindo)</li>
+<li>Interações com perfis públicos (curtidas, comentários)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Base legal do tratamento</h2>
+<p>Para usuários do Espaço Econômico Europeu (EEE), do Reino Unido e da Suíça, tratamos os dados conforme o GDPR:</p>
+<table>
+<tr><th>Base legal</th><th>Dados e finalidade</th></tr>
+<tr><td><strong>Contrato</strong> (art. 6.1.b)</td><td>Dados da conta e de fitness — necessários para fornecer o serviço de acompanhamento de treinos.</td></tr>
+<tr><td><strong>Consentimento explícito</strong> (art. 9.2.a)</td><td>Dados relacionados à saúde (peso corporal, métricas de treino) — inseridos voluntariamente. Revogável a qualquer momento.</td></tr>
+<tr><td><strong>Interesse legítimo</strong> (art. 6.1.f)</td><td>Relatórios de falhas, análises, dados anonimizados para melhoria do produto e pesquisa — para manter, proteger e melhorar o app.</td></tr>
+<tr><td><strong>Consentimento</strong> (art. 6.1.a)</td><td>ID de publicidade para o AdMob, notificações push — com opção de desativação nas configurações do dispositivo.</td></tr>
+</table>
+<p>Para usuários fora do EEE, tratamos os dados conforme descrito nesta política e em conformidade com as leis locais aplicáveis.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Como usamos suas informações</h2>
+<table>
+<tr><th>Finalidade</th><th>Dados usados</th></tr>
+<tr><td>Experiência de acompanhamento de treinos</td><td>Dados de fitness, informações da conta</td></tr>
+<tr><td>Funções sociais (rankings, feed, chat)</td><td>Apelido, avatar, estatísticas de treino</td></tr>
+<tr><td>Gamificação (XP, níveis, ranks)</td><td>Dados de treino, progresso nos exercícios</td></tr>
+<tr><td>Geração de planos de treino com IA</td><td>Preferências de fitness (no servidor, não armazenadas pelo fornecedor de IA)</td></tr>
+<tr><td>Notificações push</td><td>Token FCM, preferências</td></tr>
+<tr><td>Correção de bugs e melhorias</td><td>Relatórios de falhas, análises anonimizadas</td></tr>
+<tr><td>Anúncios (nível gratuito)</td><td>ID de publicidade via AdMob</td></tr>
+</table>
+<h3>4.1 Dados anonimizados e agregados</h3>
+<div class="card">
+<div class="card-title">Importante</div>
+<p>Podemos usar dados anonimizados, desidentificados e agregados (dados que não podem mais identificá-lo pessoalmente) para qualquer finalidade lícita, incluindo, entre outras:</p>
+<ul>
+<li>Melhoria do produto, desenvolvimento de recursos e pesquisa</li>
+<li>Treinamento e melhoria de modelos de machine learning e recursos de IA (por exemplo, melhores recomendações de exercícios, análise da execução, aprimoramento do movimento)</li>
+<li>Geração de estatísticas agregadas e benchmarks (por exemplo, desempenho médio por exercício)</li>
+<li>Análises de negócio e relatórios</li>
+</ul>
+<p>Esses dados anonimizados <strong>nunca incluem</strong> seu nome, e-mail, apelido, foto de perfil ou qualquer informação que possa identificá-lo. Uma vez anonimizados, os dados deixam de ser dados pessoais segundo o GDPR e outras leis de privacidade, e esta política não restringe seu uso.</p>
+</div>
+<p><strong>Não</strong> usamos seus dados de fitness identificáveis, seu histórico de treinos ou suas medições corporais para fins publicitários. O AdMob recebe apenas identificadores padrão no nível do dispositivo.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Conteúdo de usuários e treinamento de IA</h2>
+<h3>5.1 Vídeos e mídias</h3>
+<p>Ao enviar vídeos de recordes pessoais ou outras mídias ao SyzUp, você nos concede uma licença conforme descrito em nossos <a href="terms.html" class="xdoc">Termos de Serviço</a>. Além de exibir seu conteúdo nas funções sociais do app, podemos usar conteúdo de vídeo <strong>desidentificado</strong> (com todas as informações de identificação pessoal, como rostos, nomes e metadados, removidas) para treinar modelos de machine learning que melhorem recursos como análise da técnica de exercícios, feedback sobre a execução e reconhecimento de movimentos.</p>
+<p><strong>Nunca</strong> usaremos seus vídeos, imagens ou mídias identificáveis em materiais de marketing, nem os venderemos a terceiros, nem os disponibilizaremos fora do SyzUp sem o seu consentimento explícito e separado.</p>
+<h3>5.2 Dados de treino e desempenho</h3>
+<p>Estatísticas de treino anonimizadas (por exemplo, frequência de exercícios, padrões de volume, curvas de progressão) podem ser usadas para melhorar os planos de treino gerados por IA, desenvolver novos recursos e criar benchmarks agregados. Esses dados são despojados de todos os identificadores pessoais antes do uso.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Serviços de terceiros</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Autenticação, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Dados armazenados na <strong>UE (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Privacidade do Firebase →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">DPA do Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Anúncios no nível gratuito. Recebe apenas identificadores do dispositivo. Nenhum dado de fitness ou saúde é compartilhado.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Privacidade do Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Gerenciamento de assinaturas via Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">Privacidade do RevenueCat →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (via Cloud Functions)</div>
+<p>A geração de treinos com IA ocorre no servidor. As preferências de fitness são enviadas para gerar os planos, mas não são armazenadas pela OpenAI. Nenhum dado pessoal é transferido.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">Privacidade da OpenAI →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Armazenamento de dados e segurança</h2>
+<p>Armazenamento principal dos dados: Firebase (Google Cloud), <strong>União Europeia</strong>.</p>
+<ul>
+<li>Regras de segurança do Firebase — acesso restrito aos proprietários dos dados</li>
+<li>Firebase App Check — previne acesso não autorizado à API</li>
+<li>Armazenamento local criptografado com AES (Hive com chaves do keychain da plataforma)</li>
+<li>Limitação de requisições e registro de segurança no servidor</li>
+<li>HTTPS/TLS para toda a comunicação de rede</li>
+<li>Nenhuma senha armazenada em texto simples</li>
+</ul>
+<h3>Transferências internacionais de dados</h3>
+<p>Alguns serviços (Crashlytics, AdMob) podem tratar dados nos Estados Unidos. Para usuários do EEE/Reino Unido, essas transferências são protegidas por cláusulas contratuais padrão (SCCs). Para todos os usuários, garantimos que os dados transferidos recebam proteção substancialmente equivalente independentemente do destino.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Retenção de dados</h2>
+<table>
+<tr><th>Tipo de dados</th><th>Período de retenção</th></tr>
+<tr><td>Dados da conta e de fitness</td><td>Até a exclusão da conta</td></tr>
+<tr><td>Mensagens de chat</td><td>Até a exclusão ou a exclusão da conta</td></tr>
+<tr><td>Relatórios de falhas</td><td>90 dias</td></tr>
+<tr><td>Análises</td><td>14 meses</td></tr>
+<tr><td>Logs de segurança</td><td>30 dias</td></tr>
+<tr><td>Após a exclusão da conta</td><td>Todos os dados pessoais são removidos em até 30 dias</td></tr>
+<tr><td>Dados anonimizados/agregados</td><td>Retidos indefinidamente (não são dados pessoais)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Compartilhamento de dados</h2>
+<p><strong>Não vendemos seus dados pessoais.</strong> Não compartilhamos seus dados pessoais com terceiros para os fins de marketing deles.</p>
+<ul>
+<li><strong>Funções sociais:</strong> apelido, avatar, rank e estatísticas visíveis conforme sua configuração de privacidade (público/amigos/privado).</li>
+<li><strong>Publicidade:</strong> o AdMob recebe apenas identificadores do dispositivo. Nenhum dado de fitness ou saúde.</li>
+<li><strong>Prestadores de serviços:</strong> os operadores listados na seção 6, exclusivamente para prestar os serviços, com base em acordos de tratamento de dados.</li>
+<li><strong>Obrigações legais:</strong> quando exigido por lei, regulamento, processo judicial ou solicitação governamental.</li>
+<li><strong>Dados anonimizados:</strong> dados desidentificados e agregados podem ser compartilhados para fins de pesquisa, benchmarking ou de negócio, mas esses dados não podem identificá-lo.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> Seus direitos</h2>
+<h3>10.1 Todos os usuários</h3>
+<p>Independentemente de onde você mora, você pode:</p>
+<ul>
+<li>Acessar e revisar seus dados pessoais no app</li>
+<li>Corrigir as informações do seu perfil a qualquer momento</li>
+<li>Excluir sua conta e todos os dados associados (Configurações → Conta → Excluir conta)</li>
+<li>Desativar notificações push nas configurações do dispositivo</li>
+<li>Desativar anúncios personalizados nas configurações do dispositivo</li>
+<li>Controlar sua visibilidade social pelas configurações do modo de privacidade</li>
+<li>Entrar em contato conosco sobre qualquer questão relacionada a dados</li>
+</ul>
+<h3>10.2 Espaço Econômico Europeu, Reino Unido e Suíça (GDPR)</h3>
+<p>Além disso, você tem direito a:</p>
+<ul>
+<li><strong>Acesso (art. 15):</strong> solicitar uma cópia completa dos seus dados pessoais.</li>
+<li><strong>Retificação (art. 16):</strong> corrigir dados inexatos.</li>
+<li><strong>Apagamento (art. 17):</strong> solicitar a exclusão completa.</li>
+<li><strong>Limitação (art. 18):</strong> restringir o tratamento em determinados casos.</li>
+<li><strong>Portabilidade (art. 20):</strong> receber os dados em formato legível por máquina.</li>
+<li><strong>Oposição (art. 21):</strong> opor-se ao tratamento baseado em interesse legítimo.</li>
+<li><strong>Retirada do consentimento (art. 7.3):</strong> a qualquer momento, sem afetar a licitude do tratamento anterior.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Autoridade de controle</div>
+<p>Você tem o direito de apresentar uma reclamação a uma autoridade de controle. Na Polônia: Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. Você também pode recorrer à autoridade do seu país de residência.</p>
+</div>
+<h3>10.3 Residentes da Califórnia (CCPA/CPRA)</h3>
+<p>Se você reside na Califórnia, tem direitos adicionais sob o California Consumer Privacy Act (CCPA) e o California Privacy Rights Act (CPRA):</p>
+<ul>
+<li><strong>Direito de saber:</strong> quais dados pessoais coletamos, usamos e divulgamos.</li>
+<li><strong>Direito à exclusão:</strong> solicitar a exclusão dos seus dados pessoais.</li>
+<li><strong>Direito de recusar a venda:</strong> não vendemos seus dados pessoais. Não compartilhamos dados pessoais para publicidade comportamental entre contextos.</li>
+<li><strong>Direito à não discriminação:</strong> não o discriminaremos por exercer seus direitos.</li>
+<li><strong>Direito à correção:</strong> corrigir dados pessoais inexatos.</li>
+<li><strong>Direito de limitar o uso de dados pessoais sensíveis:</strong> você pode limitar o uso de dados de fitness relacionados à saúde ao necessário para prestar o serviço.</li>
+</ul>
+<p>Para exercer esses direitos, entre em contato pelo e-mail indicado na seção 1. Verificaremos sua identidade e responderemos em até 45 dias.</p>
+<p><strong>Categorias de dados pessoais coletados</strong> (conforme CCPA §1798.110): identificadores (e-mail, apelido), informações relacionadas à saúde (dados de fitness, peso corporal), atividade na internet/eletrônica (análises de uso, dados de falhas), geolocalização (apenas no nível de país) e informações audiovisuais (fotos de perfil, vídeos de recordes).</p>
+<h3>10.4 Outras jurisdições</h3>
+<p>Se você mora em uma jurisdição com leis de proteção de dados (incluindo, entre outras, a LGPD do Brasil, a PIPEDA do Canadá, o Privacy Act da Austrália, a APPI do Japão, a PIPA da Coreia do Sul), atenderemos aos direitos aplicáveis mediante solicitação. Entre em contato pelo e-mail indicado na seção 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Exclusão da conta</h2>
+<ul>
+<li><strong>No app:</strong> Configurações → Conta → Excluir conta</li>
+<li><strong>Por e-mail:</strong> assunto "Account Deletion Request"</li>
+</ul>
+<p>Todos os dados pessoais são excluídos permanentemente em até 30 dias, incluindo: perfil, treinos, planos, chats, recordes, vídeos e tokens FCM. Dados agregados anonimizados que não podem identificá-lo poderão ser mantidos.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Privacidade de crianças</h2>
+<p>O SyzUp não se destina a menores de 16 anos (ou da idade de consentimento digital aplicável na jurisdição pertinente). Não coletamos dados de crianças de forma consciente. Se soubermos que uma criança nos forneceu dados pessoais, os excluiremos prontamente. Os pais podem entrar em contato conosco para solicitar a exclusão.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Publicidade</h2>
+<ul>
+<li><strong>Android:</strong> Configurações → Privacidade → Anúncios → "Desativar personalização de anúncios"</li>
+<li>No nível gratuito, anúncios não personalizados continuarão sendo exibidos.</li>
+<li>Assinantes premium não veem anúncios.</li>
+</ul>
+<p>Não usamos dados de saúde ou fitness para segmentação de anúncios. O AdMob recebe apenas identificadores padrão do dispositivo.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Sinais "Do Not Track"</h2>
+<p>O SyzUp é um aplicativo móvel e não responde a sinais "Do Not Track" de navegadores. Você pode, no entanto, controlar a coleta de dados por meio dos mecanismos de desativação descritos nesta política (personalização de anúncios, notificações push, modo de privacidade).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Alterações desta política</h2>
+<p>Informaremos você sobre alterações substanciais por notificação no app com pelo menos 14 dias de antecedência da entrada em vigor. O uso continuado após a data de vigência constitui aceitação. Se você não concordar, exclua sua conta antes dessa data.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Contato</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Controlador dos dados)</p>
+<p>E-mail: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Operado a partir de: Polônia, UE</p>
+</div>
+<p>Procuramos responder a todas as solicitações em até 30 dias (45 dias para solicitações CCPA).</p>
+</section>
+
+</div>
+
+<div class="lang-doc" data-lang="ru">
+
+<section>
+<p class="conv-note">Данный перевод предоставляется исключительно в информационных целях. В случае расхождений преимущественную силу имеет английская версия (для потребителей, проживающих в Польше, — польская версия).</p>
+<p>Настоящая Политика конфиденциальности объясняет, как SyzUp ("мы", "нас", "наш", "приложение") собирает, использует, хранит и защищает ваши персональные данные. SyzUp управляется из Европейского союза и обслуживает пользователей по всему миру. Настоящая политика применяется независимо от того, откуда вы используете приложение.</p>
+<p>Используя SyzUp, вы подтверждаете, что прочитали и поняли настоящую Политику конфиденциальности. Если вы не согласны, не используйте приложение.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Оператор персональных данных</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>Эл. почта: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Управляется из: Польша, Европейский союз</p>
+</div>
+<p>Для целей GDPR контролёром данных является индивидуальный оператор SyzUp, с которым можно связаться по указанному выше адресу электронной почты.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Какие данные мы собираем</h2>
+<h3>2.1 Данные учётной записи</h3>
+<ul>
+<li>Адрес электронной почты</li>
+<li>Отображаемое имя (никнейм)</li>
+<li>Аватар профиля (если загружен)</li>
+<li>Данные аутентификации Google Sign-In или Apple Sign-In</li>
+</ul>
+<h3>2.2 Фитнес-данные и данные, связанные со здоровьем</h3>
+<div class="warning">
+<div class="warning-title">Уведомление о чувствительных данных</div>
+<p>Фитнес-данные и измерения тела могут квалифицироваться как данные о здоровье согласно некоторым законам (включая ст. 9 GDPR). Добровольно вводя эти данные, вы даёте явное согласие на их обработку в соответствии с настоящей политикой. Вы можете отозвать согласие в любой момент, удалив свои данные или учётную запись.</p>
+</div>
+<ul>
+<li>Тренировочные сессии (упражнения, подходы, повторения, поднятый вес)</li>
+<li>Планы тренировок и предпочтения</li>
+<li>Личные рекорды (PR)</li>
+<li>Записи массы тела</li>
+<li>Прогресс в упражнениях, данные XP и уровня</li>
+<li>Статистика и история тренировок</li>
+<li>Оценки восстановления мышц</li>
+</ul>
+<h3>2.3 Данные об устройстве и использовании</h3>
+<ul>
+<li>Тип устройства и версия операционной системы</li>
+<li>Версия и номер сборки приложения</li>
+<li>Отчёты о сбоях и данные о производительности (Firebase Crashlytics)</li>
+<li>Анонимизированные аналитические события (Firebase Analytics)</li>
+<li>Рекламный идентификатор (для AdMob, только бесплатная версия)</li>
+</ul>
+<h3>2.4 Медиа и пользовательский контент</h3>
+<ul>
+<li>Фотографии профиля (камера или галерея)</li>
+<li>Видео личных рекордов (по желанию)</li>
+<li>Посты и комментарии в социальной ленте</li>
+<li>Сообщения чата между пользователями</li>
+</ul>
+<h3>2.5 Социальные данные</h3>
+<ul>
+<li>Отношения подписки (подписчики/подписки)</li>
+<li>Взаимодействия с публичными профилями (лайки, комментарии)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Правовые основания обработки</h2>
+<p>Для пользователей из Европейской экономической зоны (ЕЭЗ), Великобритании и Швейцарии мы обрабатываем данные в соответствии с GDPR:</p>
+<table>
+<tr><th>Правовое основание</th><th>Данные и цель</th></tr>
+<tr><td><strong>Договор</strong> (ст. 6(1)(b))</td><td>Данные учётной записи и фитнес-данные — необходимы для предоставления сервиса отслеживания тренировок.</td></tr>
+<tr><td><strong>Явное согласие</strong> (ст. 9(2)(a))</td><td>Данные, связанные со здоровьем (масса тела, тренировочные метрики) — вводятся добровольно. Отзывается в любой момент.</td></tr>
+<tr><td><strong>Законный интерес</strong> (ст. 6(1)(f))</td><td>Отчёты о сбоях, аналитика, анонимизированные данные для улучшения продукта и исследований — для поддержки, защиты и улучшения приложения.</td></tr>
+<tr><td><strong>Согласие</strong> (ст. 6(1)(a))</td><td>Рекламный идентификатор для AdMob, push-уведомления — можно отключить в настройках устройства.</td></tr>
+</table>
+<p>Для пользователей за пределами ЕЭЗ мы обрабатываем данные, как описано в настоящей политике, и в соответствии с применимым местным законодательством.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Как мы используем вашу информацию</h2>
+<table>
+<tr><th>Цель</th><th>Используемые данные</th></tr>
+<tr><td>Отслеживание тренировок</td><td>Фитнес-данные, информация учётной записи</td></tr>
+<tr><td>Социальные функции (рейтинги, лента, чат)</td><td>Никнейм, аватар, статистика тренировок</td></tr>
+<tr><td>Геймификация (XP, уровни, ранги)</td><td>Данные тренировок, прогресс в упражнениях</td></tr>
+<tr><td>Генерация планов тренировок с помощью ИИ</td><td>Фитнес-предпочтения (на стороне сервера, не хранятся поставщиком ИИ)</td></tr>
+<tr><td>Push-уведомления</td><td>Токен FCM, предпочтения</td></tr>
+<tr><td>Исправление ошибок и улучшения</td><td>Отчёты о сбоях, анонимизированная аналитика</td></tr>
+<tr><td>Реклама (бесплатная версия)</td><td>Рекламный идентификатор через AdMob</td></tr>
+</table>
+<h3>4.1 Анонимизированные и агрегированные данные</h3>
+<div class="card">
+<div class="card-title">Важно</div>
+<p>Мы можем использовать анонимизированные, деидентифицированные и агрегированные данные (данные, которые больше не могут вас идентифицировать) для любых законных целей, включая, помимо прочего:</p>
+<ul>
+<li>улучшение продукта, разработку функций и исследования,</li>
+<li>обучение и улучшение моделей машинного обучения и функций ИИ (например, лучшие рекомендации упражнений, анализ техники, совершенствование движений),</li>
+<li>формирование агрегированной статистики и бенчмарков (например, средние показатели по упражнению),</li>
+<li>бизнес-аналитику и отчётность.</li>
+</ul>
+<p>Эти анонимизированные данные <strong>никогда не содержат</strong> вашего имени, электронной почты, никнейма, фотографии профиля или любой информации, которая может вас идентифицировать. После анонимизации данные перестают быть персональными данными в понимании GDPR и других законов о конфиденциальности, и настоящая политика не ограничивает их использование.</p>
+</div>
+<p>Мы <strong>не</strong> используем ваши идентифицируемые фитнес-данные, историю тренировок или измерения тела в рекламных целях. AdMob получает только стандартные идентификаторы на уровне устройства.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Пользовательский контент и обучение ИИ</h2>
+<h3>5.1 Видео и медиа</h3>
+<p>Загружая в SyzUp видео личных рекордов или другие медиа, вы предоставляете нам лицензию, описанную в наших <a href="terms.html" class="xdoc">Условиях использования</a>. Помимо отображения вашего контента в социальных функциях приложения, мы можем использовать <strong>деидентифицированный</strong> видеоконтент (со всей удалённой личной идентифицирующей информацией, такой как лица, имена и метаданные) для обучения моделей машинного обучения с целью улучшения таких функций, как анализ техники упражнений, обратная связь по технике и распознавание движений.</p>
+<p>Мы <strong>никогда</strong> не используем ваши идентифицируемые видео, изображения или медиа в маркетинговых материалах, не продадим их третьим лицам и не сделаем доступными за пределами SyzUp без вашего явного, отдельного согласия.</p>
+<h3>5.2 Данные тренировок и результатов</h3>
+<p>Анонимизированная статистика тренировок (например, частота упражнений, паттерны объёма, кривые прогрессии) может использоваться для улучшения планов тренировок, генерируемых ИИ, разработки новых функций и создания агрегированных бенчмарков. Перед использованием из этих данных удаляются все личные идентификаторы.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Сторонние сервисы</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Аутентификация, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Данные хранятся в <strong>ЕС (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Конфиденциальность Firebase →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">DPA Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Реклама в бесплатной версии. Получает только идентификаторы устройства. Никакие фитнес-данные или данные о здоровье не передаются.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Конфиденциальность Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Управление подписками через Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">Конфиденциальность RevenueCat →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (через Cloud Functions)</div>
+<p>Генерация тренировок с помощью ИИ выполняется на стороне сервера. Фитнес-предпочтения передаются для генерации планов, но не хранятся OpenAI. Персональные данные не передаются.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">Конфиденциальность OpenAI →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Хранение данных и безопасность</h2>
+<p>Основное хранилище данных: Firebase (Google Cloud), <strong>Европейский союз</strong>.</p>
+<ul>
+<li>Правила безопасности Firebase — доступ ограничен владельцами данных</li>
+<li>Firebase App Check — предотвращает несанкционированный доступ к API</li>
+<li>Локальное хранилище с шифрованием AES (Hive с ключами из системного хранилища ключей)</li>
+<li>Ограничение частоты запросов и журналирование безопасности на стороне сервера</li>
+<li>HTTPS/TLS для всей сетевой коммуникации</li>
+<li>Пароли не хранятся в открытом виде</li>
+</ul>
+<h3>Международная передача данных</h3>
+<p>Некоторые сервисы (Crashlytics, AdMob) могут обрабатывать данные в США. Для пользователей из ЕЭЗ/Великобритании такая передача защищена стандартными договорными условиями (SCC). Для всех пользователей мы обеспечиваем, чтобы передаваемые данные получали по существу эквивалентную защиту независимо от места назначения.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Сроки хранения данных</h2>
+<table>
+<tr><th>Тип данных</th><th>Срок хранения</th></tr>
+<tr><td>Данные учётной записи и фитнес-данные</td><td>До удаления учётной записи</td></tr>
+<tr><td>Сообщения чата</td><td>До удаления или удаления учётной записи</td></tr>
+<tr><td>Отчёты о сбоях</td><td>90 дней</td></tr>
+<tr><td>Аналитика</td><td>14 месяцев</td></tr>
+<tr><td>Журналы безопасности</td><td>30 дней</td></tr>
+<tr><td>После удаления учётной записи</td><td>Все персональные данные удаляются в течение 30 дней</td></tr>
+<tr><td>Анонимизированные/агрегированные данные</td><td>Хранятся бессрочно (не являются персональными данными)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Передача данных</h2>
+<p><strong>Мы не продаём ваши персональные данные.</strong> Мы не передаём ваши персональные данные третьим лицам для их собственных маркетинговых целей.</p>
+<ul>
+<li><strong>Социальные функции:</strong> никнейм, аватар, ранг и статистика видны в соответствии с вашей настройкой конфиденциальности (публично/друзья/приватно).</li>
+<li><strong>Реклама:</strong> AdMob получает только идентификаторы устройства. Никаких фитнес-данных или данных о здоровье.</li>
+<li><strong>Поставщики услуг:</strong> обработчики, перечисленные в разделе 6, исключительно для предоставления услуг, на основании соглашений об обработке данных.</li>
+<li><strong>Юридические требования:</strong> если этого требуют закон, нормативные акты, судебный процесс или запрос государственных органов.</li>
+<li><strong>Анонимизированные данные:</strong> деидентифицированные, агрегированные данные могут передаваться для исследований, бенчмаркинга или бизнес-целей, но эти данные не могут вас идентифицировать.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> Ваши права</h2>
+<h3>10.1 Все пользователи</h3>
+<p>Где бы вы ни жили, вы можете:</p>
+<ul>
+<li>просматривать свои персональные данные в приложении,</li>
+<li>исправлять информацию своего профиля в любое время,</li>
+<li>удалить учётную запись и все связанные данные (Настройки → Аккаунт → Удалить аккаунт),</li>
+<li>отключить push-уведомления в настройках устройства,</li>
+<li>отключить персонализированную рекламу в настройках устройства,</li>
+<li>управлять своей социальной видимостью через настройки режима конфиденциальности,</li>
+<li>связаться с нами по любому вопросу, связанному с данными.</li>
+</ul>
+<h3>10.2 Европейская экономическая зона, Великобритания и Швейцария (GDPR)</h3>
+<p>Дополнительно вы имеете право на:</p>
+<ul>
+<li><strong>Доступ (ст. 15):</strong> запросить полную копию ваших персональных данных.</li>
+<li><strong>Исправление (ст. 16):</strong> исправить неточные данные.</li>
+<li><strong>Удаление (ст. 17):</strong> запросить полное удаление.</li>
+<li><strong>Ограничение (ст. 18):</strong> ограничить обработку в определённых случаях.</li>
+<li><strong>Переносимость (ст. 20):</strong> получить данные в машиночитаемом формате.</li>
+<li><strong>Возражение (ст. 21):</strong> возразить против обработки на основании законного интереса.</li>
+<li><strong>Отзыв согласия (ст. 7(3)):</strong> в любой момент, без ущерба для законности предшествующей обработки.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Надзорный орган</div>
+<p>Вы имеете право подать жалобу в надзорный орган. В Польше: Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. Вы также можете обратиться в орган страны вашего проживания.</p>
+</div>
+<h3>10.3 Жители Калифорнии (CCPA/CPRA)</h3>
+<p>Если вы проживаете в Калифорнии, у вас есть дополнительные права согласно California Consumer Privacy Act (CCPA) и California Privacy Rights Act (CPRA):</p>
+<ul>
+<li><strong>Право знать:</strong> какие персональные данные мы собираем, используем и раскрываем.</li>
+<li><strong>Право на удаление:</strong> запросить удаление ваших персональных данных.</li>
+<li><strong>Право отказаться от продажи:</strong> мы не продаём ваши персональные данные. Мы не передаём персональные данные для кросс-контекстной поведенческой рекламы.</li>
+<li><strong>Право на недискриминацию:</strong> мы не будем дискриминировать вас за осуществление ваших прав.</li>
+<li><strong>Право на исправление:</strong> исправить неточные персональные данные.</li>
+<li><strong>Право ограничить использование чувствительных персональных данных:</strong> вы можете ограничить использование фитнес-данных, связанных со здоровьем, необходимым для предоставления сервиса.</li>
+</ul>
+<p>Для осуществления этих прав свяжитесь с нами по адресу электронной почты из раздела 1. Мы проверим вашу личность и ответим в течение 45 дней.</p>
+<p><strong>Категории собираемых персональных данных</strong> (согласно CCPA §1798.110): идентификаторы (электронная почта, никнейм), информация, связанная со здоровьем (фитнес-данные, масса тела), интернет-/электронная активность (аналитика использования, данные о сбоях), геолокация (только на уровне страны) и аудиовизуальная информация (фотографии профиля, видео рекордов).</p>
+<h3>10.4 Прочие юрисдикции</h3>
+<p>Если вы проживаете в юрисдикции с законами о защите данных (включая, помимо прочего, бразильский LGPD, канадский PIPEDA, австралийский Privacy Act, японский APPI, южнокорейский PIPA), мы выполним применимые к вам права по запросу. Свяжитесь с нами по адресу электронной почты из раздела 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Удаление учётной записи</h2>
+<ul>
+<li><strong>В приложении:</strong> Настройки → Аккаунт → Удалить аккаунт</li>
+<li><strong>По электронной почте:</strong> тема "Account Deletion Request"</li>
+</ul>
+<p>Все персональные данные безвозвратно удаляются в течение 30 дней, включая: профиль, тренировки, планы, чаты, рекорды, видео и токены FCM. Анонимизированные агрегированные данные, которые не могут вас идентифицировать, могут быть сохранены.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Конфиденциальность детей</h2>
+<p>SyzUp не предназначен для детей младше 16 лет (или младше возраста цифрового согласия, применимого в соответствующей юрисдикции). Мы сознательно не собираем данные детей. Если мы узнаем, что ребёнок предоставил нам персональные данные, мы незамедлительно их удалим. Родители могут связаться с нами для запроса удаления.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Реклама</h2>
+<ul>
+<li><strong>Android:</strong> Настройки → Конфиденциальность → Реклама → "Отключить персонализацию рекламы"</li>
+<li>В бесплатной версии по-прежнему будет отображаться неперсонализированная реклама.</li>
+<li>Подписчики премиум-версии не видят рекламу.</li>
+</ul>
+<p>Мы не используем данные о здоровье или фитнесе для таргетирования рекламы. AdMob получает только стандартные идентификаторы устройства.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Сигналы "Do Not Track"</h2>
+<p>SyzUp — мобильное приложение и не реагирует на браузерные сигналы "Do Not Track". Однако вы можете контролировать сбор данных с помощью механизмов отказа, описанных в настоящей политике (персонализация рекламы, push-уведомления, режим конфиденциальности).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Изменения настоящей политики</h2>
+<p>О существенных изменениях мы сообщим через уведомление в приложении не менее чем за 14 дней до их вступления в силу. Продолжение использования после даты вступления в силу означает их принятие. Если вы не согласны, удалите свою учётную запись до этой даты.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Контакты</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Контролёр данных)</p>
+<p>Эл. почта: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Управляется из: Польша, ЕС</p>
+</div>
+<p>Мы стараемся отвечать на все запросы в течение 30 дней (45 дней для запросов CCPA).</p>
+</section>
+
+</div>
+
+<div class="lang-doc" data-lang="uk">
+
+<section>
+<p class="conv-note">Цей переклад надається виключно в інформаційних цілях. У разі розбіжностей переважну силу має англійська версія (для споживачів, які проживають у Польщі, — польська версія).</p>
+<p>Ця Політика конфіденційності пояснює, як SyzUp ("ми", "нас", "наш", "застосунок") збирає, використовує, зберігає та захищає ваші персональні дані. SyzUp керується з Європейського Союзу та обслуговує користувачів по всьому світу. Ця політика застосовується незалежно від того, звідки ви користуєтеся застосунком.</p>
+<p>Використовуючи SyzUp, ви підтверджуєте, що прочитали та зрозуміли цю Політику конфіденційності. Якщо ви не згодні, не використовуйте застосунок.</p>
+</section>
+
+<section>
+<h2><span class="num">1.</span> Контролер даних</h2>
+<div class="card">
+<p><strong>SyzUp</strong></p>
+<p>Ел. пошта: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Керується з: Польща, Європейський Союз</p>
+</div>
+<p>Для цілей GDPR контролером даних є індивідуальний оператор SyzUp, з яким можна зв'язатися за вказаною вище адресою електронної пошти.</p>
+</section>
+
+<section>
+<h2><span class="num">2.</span> Які дані ми збираємо</h2>
+<h3>2.1 Дані облікового запису</h3>
+<ul>
+<li>Адреса електронної пошти</li>
+<li>Відображуване ім'я (нікнейм)</li>
+<li>Аватар профілю (якщо завантажено)</li>
+<li>Дані автентифікації Google Sign-In або Apple Sign-In</li>
+</ul>
+<h3>2.2 Фітнес-дані та дані, пов'язані зі здоров'ям</h3>
+<div class="warning">
+<div class="warning-title">Повідомлення про чутливі дані</div>
+<p>Фітнес-дані та вимірювання тіла можуть кваліфікуватися як дані про здоров'я згідно з деякими законами (включно зі ст. 9 GDPR). Добровільно вводячи ці дані, ви надаєте явну згоду на їх обробку відповідно до цієї політики. Ви можете відкликати згоду в будь-який момент, видаливши свої дані або обліковий запис.</p>
+</div>
+<ul>
+<li>Тренувальні сесії (вправи, підходи, повторення, піднята вага)</li>
+<li>Плани тренувань і вподобання</li>
+<li>Особисті рекорди (PR)</li>
+<li>Записи маси тіла</li>
+<li>Прогрес у вправах, дані XP та рівня</li>
+<li>Статистика та історія тренувань</li>
+<li>Оцінки відновлення м'язів</li>
+</ul>
+<h3>2.3 Дані про пристрій і використання</h3>
+<ul>
+<li>Тип пристрою та версія операційної системи</li>
+<li>Версія та номер збірки застосунку</li>
+<li>Звіти про збої та дані про продуктивність (Firebase Crashlytics)</li>
+<li>Анонімізовані аналітичні події (Firebase Analytics)</li>
+<li>Рекламний ідентифікатор (для AdMob, лише безкоштовна версія)</li>
+</ul>
+<h3>2.4 Медіа та користувацький контент</h3>
+<ul>
+<li>Фотографії профілю (камера або галерея)</li>
+<li>Відео особистих рекордів (за бажанням)</li>
+<li>Дописи та коментарі в соціальній стрічці</li>
+<li>Повідомлення чату між користувачами</li>
+</ul>
+<h3>2.5 Соціальні дані</h3>
+<ul>
+<li>Відносини підписки (підписники/підписки)</li>
+<li>Взаємодії з публічними профілями (вподобання, коментарі)</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">3.</span> Правові підстави обробки</h2>
+<p>Для користувачів з Європейської економічної зони (ЄЕП), Великої Британії та Швейцарії ми обробляємо дані відповідно до GDPR:</p>
+<table>
+<tr><th>Правова підстава</th><th>Дані та мета</th></tr>
+<tr><td><strong>Договір</strong> (ст. 6(1)(b))</td><td>Дані облікового запису та фітнес-дані — необхідні для надання сервісу відстеження тренувань.</td></tr>
+<tr><td><strong>Явна згода</strong> (ст. 9(2)(a))</td><td>Дані, пов'язані зі здоров'ям (маса тіла, тренувальні метрики) — вводяться добровільно. Відкликається в будь-який момент.</td></tr>
+<tr><td><strong>Законний інтерес</strong> (ст. 6(1)(f))</td><td>Звіти про збої, аналітика, анонімізовані дані для покращення продукту та досліджень — для підтримки, захисту та вдосконалення застосунку.</td></tr>
+<tr><td><strong>Згода</strong> (ст. 6(1)(a))</td><td>Рекламний ідентифікатор для AdMob, push-сповіщення — можна вимкнути в налаштуваннях пристрою.</td></tr>
+</table>
+<p>Для користувачів за межами ЄЕП ми обробляємо дані, як описано в цій політиці, та відповідно до застосовного місцевого законодавства.</p>
+</section>
+
+<section>
+<h2><span class="num">4.</span> Як ми використовуємо вашу інформацію</h2>
+<table>
+<tr><th>Мета</th><th>Використовувані дані</th></tr>
+<tr><td>Відстеження тренувань</td><td>Фітнес-дані, інформація облікового запису</td></tr>
+<tr><td>Соціальні функції (рейтинги, стрічка, чат)</td><td>Нікнейм, аватар, статистика тренувань</td></tr>
+<tr><td>Гейміфікація (XP, рівні, ранги)</td><td>Дані тренувань, прогрес у вправах</td></tr>
+<tr><td>Генерація планів тренувань за допомогою ШІ</td><td>Фітнес-уподобання (на боці сервера, не зберігаються постачальником ШІ)</td></tr>
+<tr><td>Push-сповіщення</td><td>Токен FCM, уподобання</td></tr>
+<tr><td>Виправлення помилок і вдосконалення</td><td>Звіти про збої, анонімізована аналітика</td></tr>
+<tr><td>Реклама (безкоштовна версія)</td><td>Рекламний ідентифікатор через AdMob</td></tr>
+</table>
+<h3>4.1 Анонімізовані та агреговані дані</h3>
+<div class="card">
+<div class="card-title">Важливо</div>
+<p>Ми можемо використовувати анонімізовані, деідентифіковані та агреговані дані (дані, які більше не можуть вас ідентифікувати) для будь-яких законних цілей, включно з, але не обмежуючись:</p>
+<ul>
+<li>покращенням продукту, розробкою функцій та дослідженнями,</li>
+<li>навчанням і вдосконаленням моделей машинного навчання та функцій ШІ (наприклад, кращі рекомендації вправ, аналіз техніки, вдосконалення рухів),</li>
+<li>формуванням агрегованої статистики та бенчмарків (наприклад, середні показники за вправою),</li>
+<li>бізнес-аналітикою та звітністю.</li>
+</ul>
+<p>Ці анонімізовані дані <strong>ніколи не містять</strong> вашого імені, електронної пошти, нікнейму, фотографії профілю чи будь-якої інформації, яка може вас ідентифікувати. Після анонімізації дані перестають бути персональними даними в розумінні GDPR та інших законів про конфіденційність, і ця політика не обмежує їх використання.</p>
+</div>
+<p>Ми <strong>не</strong> використовуємо ваші ідентифіковані фітнес-дані, історію тренувань чи вимірювання тіла в рекламних цілях. AdMob отримує лише стандартні ідентифікатори на рівні пристрою.</p>
+</section>
+
+<section>
+<h2><span class="num">5.</span> Користувацький контент і навчання ШІ</h2>
+<h3>5.1 Відео та медіа</h3>
+<p>Завантажуючи в SyzUp відео особистих рекордів чи інші медіа, ви надаєте нам ліцензію, описану в наших <a href="terms.html" class="xdoc">Умовах використання</a>. Окрім відображення вашого контенту в соціальних функціях застосунку, ми можемо використовувати <strong>деідентифікований</strong> відеоконтент (з усією видаленою особистою ідентифікуючою інформацією, як-от обличчя, імена та метадані) для навчання моделей машинного навчання з метою вдосконалення таких функцій, як аналіз техніки вправ, зворотний зв'язок щодо техніки та розпізнавання рухів.</p>
+<p>Ми <strong>ніколи</strong> не використаємо ваші ідентифіковані відео, зображення чи медіа в маркетингових матеріалах, не продамо їх третім особам і не зробимо доступними за межами SyzUp без вашої явної, окремої згоди.</p>
+<h3>5.2 Дані тренувань і результатів</h3>
+<p>Анонімізована статистика тренувань (наприклад, частота вправ, патерни об'єму, криві прогресії) може використовуватися для вдосконалення планів тренувань, згенерованих ШІ, розробки нових функцій і створення агрегованих бенчмарків. Перед використанням із цих даних видаляються всі особисті ідентифікатори.</p>
+</section>
+
+<section>
+<h2><span class="num">6.</span> Сторонні сервіси</h2>
+<div class="card">
+<div class="card-title">Firebase / Google Cloud</div>
+<p>Автентифікація, Firestore, Cloud Storage, Crashlytics, Analytics, FCM, Cloud Functions, App Check. Дані зберігаються в <strong>ЄС (europe-west)</strong>.</p>
+<p><a href="https://firebase.google.com/support/privacy" target="_blank">Конфіденційність Firebase →</a> · <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">DPA Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">Google AdMob</div>
+<p>Реклама в безкоштовній версії. Отримує лише ідентифікатори пристрою. Жодні фітнес-дані чи дані про здоров'я не передаються.</p>
+<p><a href="https://policies.google.com/privacy" target="_blank">Конфіденційність Google →</a></p>
+</div>
+<div class="card">
+<div class="card-title">RevenueCat</div>
+<p>Керування підписками через Google Play Billing.</p>
+<p><a href="https://www.revenuecat.com/privacy/" target="_blank">Конфіденційність RevenueCat →</a></p>
+</div>
+<div class="card">
+<div class="card-title">OpenAI (через Cloud Functions)</div>
+<p>Генерація тренувань за допомогою ШІ виконується на боці сервера. Фітнес-уподобання передаються для генерації планів, але не зберігаються OpenAI. Персональні дані не передаються.</p>
+<p><a href="https://openai.com/policies/privacy-policy" target="_blank">Конфіденційність OpenAI →</a></p>
+</div>
+</section>
+
+<section>
+<h2><span class="num">7.</span> Зберігання даних і безпека</h2>
+<p>Основне сховище даних: Firebase (Google Cloud), <strong>Європейський Союз</strong>.</p>
+<ul>
+<li>Правила безпеки Firebase — доступ обмежено власниками даних</li>
+<li>Firebase App Check — запобігає несанкціонованому доступу до API</li>
+<li>Локальне сховище із шифруванням AES (Hive з ключами із системного сховища ключів)</li>
+<li>Обмеження частоти запитів і журналювання безпеки на боці сервера</li>
+<li>HTTPS/TLS для всієї мережевої комунікації</li>
+<li>Паролі не зберігаються у відкритому вигляді</li>
+</ul>
+<h3>Міжнародна передача даних</h3>
+<p>Деякі сервіси (Crashlytics, AdMob) можуть обробляти дані у США. Для користувачів з ЄЕП/Великої Британії така передача захищена стандартними договірними положеннями (SCC). Для всіх користувачів ми забезпечуємо, щоб передані дані отримували по суті еквівалентний захист незалежно від місця призначення.</p>
+</section>
+
+<section>
+<h2><span class="num">8.</span> Строки зберігання даних</h2>
+<table>
+<tr><th>Тип даних</th><th>Строк зберігання</th></tr>
+<tr><td>Дані облікового запису та фітнес-дані</td><td>До видалення облікового запису</td></tr>
+<tr><td>Повідомлення чату</td><td>До видалення або видалення облікового запису</td></tr>
+<tr><td>Звіти про збої</td><td>90 днів</td></tr>
+<tr><td>Аналітика</td><td>14 місяців</td></tr>
+<tr><td>Журнали безпеки</td><td>30 днів</td></tr>
+<tr><td>Після видалення облікового запису</td><td>Усі персональні дані видаляються протягом 30 днів</td></tr>
+<tr><td>Анонімізовані/агреговані дані</td><td>Зберігаються безстроково (не є персональними даними)</td></tr>
+</table>
+</section>
+
+<section>
+<h2><span class="num">9.</span> Передача даних</h2>
+<p><strong>Ми не продаємо ваші персональні дані.</strong> Ми не передаємо ваші персональні дані третім особам для їхніх власних маркетингових цілей.</p>
+<ul>
+<li><strong>Соціальні функції:</strong> нікнейм, аватар, ранг і статистика видимі відповідно до вашого налаштування конфіденційності (публічно/друзі/приватно).</li>
+<li><strong>Реклама:</strong> AdMob отримує лише ідентифікатори пристрою. Жодних фітнес-даних чи даних про здоров'я.</li>
+<li><strong>Постачальники послуг:</strong> обробники, перелічені в розділі 6, виключно для надання послуг, на підставі угод про обробку даних.</li>
+<li><strong>Юридичні вимоги:</strong> якщо цього вимагають закон, нормативні акти, судовий процес чи запит державних органів.</li>
+<li><strong>Анонімізовані дані:</strong> деідентифіковані, агреговані дані можуть передаватися для досліджень, бенчмаркінгу чи бізнес-цілей, але ці дані не можуть вас ідентифікувати.</li>
+</ul>
+</section>
+
+<section>
+<h2><span class="num">10.</span> Ваші права</h2>
+<h3>10.1 Усі користувачі</h3>
+<p>Де б ви не жили, ви можете:</p>
+<ul>
+<li>переглядати свої персональні дані в застосунку,</li>
+<li>виправляти інформацію свого профілю в будь-який час,</li>
+<li>видалити обліковий запис і всі пов'язані дані (Налаштування → Обліковий запис → Видалити обліковий запис),</li>
+<li>вимкнути push-сповіщення в налаштуваннях пристрою,</li>
+<li>вимкнути персоналізовану рекламу в налаштуваннях пристрою,</li>
+<li>керувати своєю соціальною видимістю через налаштування режиму конфіденційності,</li>
+<li>зв'язатися з нами з будь-якого питання, пов'язаного з даними.</li>
+</ul>
+<h3>10.2 Європейська економічна зона, Велика Британія та Швейцарія (GDPR)</h3>
+<p>Додатково ви маєте право на:</p>
+<ul>
+<li><strong>Доступ (ст. 15):</strong> запросити повну копію ваших персональних даних.</li>
+<li><strong>Виправлення (ст. 16):</strong> виправити неточні дані.</li>
+<li><strong>Видалення (ст. 17):</strong> вимагати повного видалення.</li>
+<li><strong>Обмеження (ст. 18):</strong> обмежити обробку в певних випадках.</li>
+<li><strong>Перенесення (ст. 20):</strong> отримати дані в машинозчитуваному форматі.</li>
+<li><strong>Заперечення (ст. 21):</strong> заперечити проти обробки на підставі законного інтересу.</li>
+<li><strong>Відкликання згоди (ст. 7(3)):</strong> у будь-який момент, без шкоди для законності попередньої обробки.</li>
+</ul>
+<div class="warning">
+<div class="warning-title">Наглядовий орган</div>
+<p>Ви маєте право подати скаргу до наглядового органу. У Польщі: Urząd Ochrony Danych Osobowych (UODO) — <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>. Ви також можете звернутися до органу країни вашого проживання.</p>
+</div>
+<h3>10.3 Мешканці Каліфорнії (CCPA/CPRA)</h3>
+<p>Якщо ви проживаєте в Каліфорнії, ви маєте додаткові права згідно з California Consumer Privacy Act (CCPA) та California Privacy Rights Act (CPRA):</p>
+<ul>
+<li><strong>Право знати:</strong> які персональні дані ми збираємо, використовуємо та розкриваємо.</li>
+<li><strong>Право на видалення:</strong> вимагати видалення ваших персональних даних.</li>
+<li><strong>Право відмовитися від продажу:</strong> ми не продаємо ваші персональні дані. Ми не передаємо персональні дані для крос-контекстної поведінкової реклами.</li>
+<li><strong>Право на недискримінацію:</strong> ми не дискримінуватимемо вас за здійснення ваших прав.</li>
+<li><strong>Право на виправлення:</strong> виправити неточні персональні дані.</li>
+<li><strong>Право обмежити використання чутливих персональних даних:</strong> ви можете обмежити використання фітнес-даних, пов'язаних зі здоров'ям, необхідним для надання сервісу.</li>
+</ul>
+<p>Для здійснення цих прав зв'яжіться з нами за адресою електронної пошти з розділу 1. Ми перевіримо вашу особу та відповімо протягом 45 днів.</p>
+<p><strong>Категорії зібраних персональних даних</strong> (згідно з CCPA §1798.110): ідентифікатори (електронна пошта, нікнейм), інформація, пов'язана зі здоров'ям (фітнес-дані, маса тіла), інтернет-/електронна активність (аналітика використання, дані про збої), геолокація (лише на рівні країни) та аудіовізуальна інформація (фотографії профілю, відео рекордів).</p>
+<h3>10.4 Інші юрисдикції</h3>
+<p>Якщо ви проживаєте в юрисдикції із законами про захист даних (включно з, але не обмежуючись, бразильським LGPD, канадським PIPEDA, австралійським Privacy Act, японським APPI, південнокорейським PIPA), ми виконаємо застосовні до вас права за запитом. Зв'яжіться з нами за адресою електронної пошти з розділу 1.</p>
+</section>
+
+<section>
+<h2><span class="num">11.</span> Видалення облікового запису</h2>
+<ul>
+<li><strong>У застосунку:</strong> Налаштування → Обліковий запис → Видалити обліковий запис</li>
+<li><strong>Електронною поштою:</strong> тема "Account Deletion Request"</li>
+</ul>
+<p>Усі персональні дані безповоротно видаляються протягом 30 днів, включно з: профілем, тренуваннями, планами, чатами, рекордами, відео та токенами FCM. Анонімізовані агреговані дані, які не можуть вас ідентифікувати, можуть бути збережені.</p>
+</section>
+
+<section>
+<h2><span class="num">12.</span> Конфіденційність дітей</h2>
+<p>SyzUp не призначений для дітей віком до 16 років (або молодших за вік цифрової згоди, застосовний у відповідній юрисдикції). Ми свідомо не збираємо дані дітей. Якщо ми дізнаємося, що дитина надала нам персональні дані, ми негайно їх видалимо. Батьки можуть зв'язатися з нами для запиту видалення.</p>
+</section>
+
+<section>
+<h2><span class="num">13.</span> Реклама</h2>
+<ul>
+<li><strong>Android:</strong> Налаштування → Конфіденційність → Реклама → "Вимкнути персоналізацію реклами"</li>
+<li>У безкоштовній версії, як і раніше, показуватиметься неперсоналізована реклама.</li>
+<li>Передплатники преміум-версії не бачать реклами.</li>
+</ul>
+<p>Ми не використовуємо дані про здоров'я чи фітнес для таргетування реклами. AdMob отримує лише стандартні ідентифікатори пристрою.</p>
+</section>
+
+<section>
+<h2><span class="num">14.</span> Сигнали "Do Not Track"</h2>
+<p>SyzUp — мобільний застосунок і не реагує на браузерні сигнали "Do Not Track". Однак ви можете контролювати збір даних за допомогою механізмів відмови, описаних у цій політиці (персоналізація реклами, push-сповіщення, режим конфіденційності).</p>
+</section>
+
+<section>
+<h2><span class="num">15.</span> Зміни цієї політики</h2>
+<p>Про суттєві зміни ми повідомимо через сповіщення в застосунку щонайменше за 14 днів до набрання ними чинності. Продовження використання після дати набрання чинності означає їх прийняття. Якщо ви не згодні, видаліть свій обліковий запис до цієї дати.</p>
+</section>
+
+<section>
+<h2><span class="num">16.</span> Контакти</h2>
+<div class="card">
+<p><strong>SyzUp</strong> (Контролер даних)</p>
+<p>Ел. пошта: <a href="mailto:syzup_app@gmail.com">syzup_app@gmail.com</a></p>
+<p>Керується з: Польща, ЄС</p>
+</div>
+<p>Ми намагаємося відповідати на всі запити протягом 30 днів (45 днів для запитів CCPA).</p>
+</section>
+
+</div>
 </div>
 
 <div class="footer">
-  <p>© 2026 SyzUp. All rights reserved.</p>
-  <p style="margin-top:8px;"><a href="terms.html">Terms of Service</a></p>
+<p id="f-rights"></p>
+<p><a class="xdoc" id="f-nav" href="terms.html"></a></p>
 </div>
+
+<script>
+(function() {
+var LANGS = ["pl", "en", "de", "es", "fr", "it", "pt", "ru", "uk"];
+var UI = {"en": {"title": "Privacy Policy", "updated": "Last updated: March 18, 2026", "badge": "Legal", "nav": "Terms of Service →", "rights": "All rights reserved.", "docTitle": "SyzUp — Privacy Policy"}, "pl": {"title": "Polityka Prywatności", "updated": "Ostatnia aktualizacja: 18 marca 2026", "badge": "Dokument prawny", "nav": "Regulamin →", "rights": "Wszelkie prawa zastrzeżone.", "docTitle": "SyzUp — Polityka Prywatności"}, "de": {"title": "Datenschutzerklärung", "updated": "Zuletzt aktualisiert: 18. März 2026", "badge": "Rechtliches", "nav": "Nutzungsbedingungen →", "rights": "Alle Rechte vorbehalten.", "docTitle": "SyzUp — Datenschutzerklärung"}, "es": {"title": "Política de Privacidad", "updated": "Última actualización: 18 de marzo de 2026", "badge": "Legal", "nav": "Términos de Servicio →", "rights": "Todos los derechos reservados.", "docTitle": "SyzUp — Política de Privacidad"}, "fr": {"title": "Politique de confidentialité", "updated": "Dernière mise à jour : 18 mars 2026", "badge": "Légal", "nav": "Conditions d'utilisation →", "rights": "Tous droits réservés.", "docTitle": "SyzUp — Politique de confidentialité"}, "it": {"title": "Informativa sulla privacy", "updated": "Ultimo aggiornamento: 18 marzo 2026", "badge": "Legale", "nav": "Termini di servizio →", "rights": "Tutti i diritti riservati.", "docTitle": "SyzUp — Informativa sulla privacy"}, "pt": {"title": "Política de Privacidade", "updated": "Última atualização: 18 de março de 2026", "badge": "Legal", "nav": "Termos de Serviço →", "rights": "Todos os direitos reservados.", "docTitle": "SyzUp — Política de Privacidade"}, "ru": {"title": "Политика конфиденциальности", "updated": "Последнее обновление: 18 марта 2026 г.", "badge": "Документ", "nav": "Условия использования →", "rights": "Все права защищены.", "docTitle": "SyzUp — Политика конфиденциальности"}, "uk": {"title": "Політика конфіденційності", "updated": "Останнє оновлення: 18 березня 2026 р.", "badge": "Документ", "nav": "Умови використання →", "rights": "Усі права захищено.", "docTitle": "SyzUp — Політика конфіденційності"}};
+var OTHER = "terms.html";
+function pick() {
+  try {
+    var p = new URLSearchParams(location.search).get('lang');
+    if (p && LANGS.indexOf(p) !== -1) return p;
+  } catch(e) {}
+  try {
+    var s = localStorage.getItem('syzup_lang');
+    if (s && LANGS.indexOf(s) !== -1) return s;
+  } catch(e) {}
+  var n = (navigator.language || 'en').slice(0,2).toLowerCase();
+  return LANGS.indexOf(n) !== -1 ? n : 'en';
+}
+function setLang(l) {
+  var u = UI[l];
+  document.querySelectorAll('.lang-doc').forEach(function(d) {
+    d.style.display = d.getAttribute('data-lang') === l ? 'block' : 'none';
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === l);
+  });
+  document.documentElement.lang = l;
+  document.title = u.docTitle;
+  document.getElementById('h-badge').textContent = u.badge;
+  document.getElementById('h-title').textContent = u.title;
+  document.getElementById('h-updated').textContent = u.updated;
+  document.getElementById('h-nav').textContent = u.nav;
+  document.getElementById('f-rights').textContent = '\u00a9 2026 SyzUp. ' + u.rights;
+  document.getElementById('f-nav').textContent = u.nav;
+  document.querySelectorAll('a.xdoc').forEach(function(a) {
+    var href = a.getAttribute('href').split('?')[0];
+    a.setAttribute('href', href + '?lang=' + l);
+  });
+  try { localStorage.setItem('syzup_lang', l); } catch(e) {}
+}
+document.querySelectorAll('.lang-btn').forEach(function(b) {
+  b.addEventListener('click', function() { setLang(b.getAttribute('data-lang')); });
+});
+setLang(pick());
+})();
+</script>
 
 </body>
 </html>
